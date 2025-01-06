@@ -12,22 +12,86 @@ body {
   line-height: 1.6;
 }
 
-h1,
+h1 {
+  font-weight: var(--bold);
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
+  font-weight: var(--semiBold);
+}
+
+p{
+  /* 14 pixel */
+  font-size: var(--pMobile) 
 }
 
 /*  */
 /* Variables */
 /*  */
 :root {
-  --stdSmall: 1rem;
-  --stdMedium: 2rem;
-  --stdLarge: 3rem;
+/* Sizes */
+  --h1Desktop: 3rem;
+  --h1Mobile: 2.25rem;
+
+  --h2Desktop: 2rem;
+  --h2Mobile: 1.75rem;
+
+  --pDesktop: 1rem;
+  --pMobile: 0.875rem;
+
+  --breadCrumbsDesktop: 0.875rem;
+  --breadCrumbsMobile: 0.75rem;
+
+  --ctaDesktop: 1.125rem;
+  --ctaMobile: 1rem;
+
+  --linksDesktop: 1rem;
+  --linksMobile: 0.875rem;
+
+  --navBarDesktop: 1rem;
+  --navBarMobile: 0.875rem;
+
+
+/* Weigts */
+--regular: 400;
+--medium: 500;
+--semiBold: 600;
+--bold: 700;
+
+/* Paddings & Margins */
+--paddingSmlDesktop: 1rem;
+--paddingSmlMobile: 0.5rem;
+
+--paddingMedDesktop: 1.5rem;
+--paddingMedMobile: 1rem;
+
+--paddingLrgDesktop: 2rem;
+--paddingLrgMobile: 1.5rem;
+
+--sectionPaddingSmlDesktop: 3rem;
+--sectionPaddingSmlMobile: 2rem;
+
+--textPaddingSpacingDesktop: 1rem;
+--textPaddingSpacingMobile: 0.5rem;
+
+
+
+/* Colors */
+  --deepForest: #2E4600; 
+  --fernLeaf: #588C42; 
+  --freshMint: #82B56D;
+  --clearSky: #87CEEB;
+  --paleStone: #F5F1E4;
+
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #D9D9D9; 
+
+
 }
 
 /*  */
