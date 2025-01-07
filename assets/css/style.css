@@ -78,6 +78,8 @@ p{
 --textPaddingSpacingDesktop: 1rem;
 --textPaddingSpacingMobile: 0.5rem;
 
+--sponsorPaddingMobile: 1rem;
+
 
 
 /* Colors */
@@ -108,12 +110,38 @@ p{
 
 /*  */
 /* My Styling */
-/*  */
+/*  *
 
 /* Header / Nav */
 /* Main / Article / Aside */
 /* Footer */
 
+.sponsor{
+  background: var(--fernLeaf);
+  padding-bottom: var(--sponsorPaddingMobile);
+  padding-top: var(--sponsorPaddingMobile);
+  color: white;
+}
+footer{
+  background: var(--deepForest);
+  color: white;
+  padding-bottom: var(--sectionPaddingSmlMobile);
+  padding-top: var(--sectionPaddingSmlMobile);
+
+}
+
+.nyhedsbrev{
+  display: flex;
+  justify-content: center;
+  background: var(--fernLeaf);
+  width: 50vw;
+  min-width: 280px;
+  text-align: center;
+}
+button{
+  background: var(--clearSky);
+  color: white;
+}
 /* 
 * Important information is higlighted
 ! Deprecated method, do not use
