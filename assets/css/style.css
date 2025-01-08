@@ -59,6 +59,9 @@ p{
   --navBarDesktop: 1rem;
   --navBarMobile: 0.875rem;
 
+  --footerTextDesktop: 3rem;
+  --footerTextMobile: 1.5rem;
+
 
 /* Weigts */
 --regular: 400;
@@ -127,19 +130,26 @@ p{
   color: white;
 }
 footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: var(--sectionPaddingSmlMobile);
   background: var(--deepForest);
   color: white;
-  padding-bottom: var(--sectionPaddingSmlMobile);
-  padding-top: var(--sectionPaddingSmlMobile);
-
 }
-.kontaktInfo{
-  display: flex;
+footer p{
+  font-size: var(--footerTextMobile);
 }
-.nyhedsbrevContainer{
-  display: flex;
-  justify-content: center;
+footer section{
+    padding-bottom: var(--sectionPaddingSmlMobile);
 }
+.kontaktInfo p:nth-of-type(1){
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
+.socials p{
+    padding-bottom: var(--textPaddingSpacingMobile);
+  }
 .nyhedsbrev{
   background: var(--fernLeaf);
   width: 50vw;
@@ -149,6 +159,12 @@ footer{
 button{
   background: var(--clearSky);
   color: white;
+}
+.footerDisclaimer{
+  text-align: center;
+}
+.footerDisclaimer p{
+  font-size: var(--breadCrumbsMobile);
 }
 /* 
 * Important information is higlighted
