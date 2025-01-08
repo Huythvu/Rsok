@@ -155,10 +155,16 @@ footer section{
   width: 50vw;
   min-width: 280px;
   text-align: center;
+  border-radius: 6px;
+}
+input::placeholder{
+  text-align: center;
 }
 button{
   background: var(--clearSky);
   color: white;
+  width: 80%;
+  border: none;
 }
 .footerDisclaimer{
   text-align: center;
