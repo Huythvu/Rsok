@@ -14,6 +14,7 @@ body {
 
 h1 {
   font-weight: var(--bold);
+  color: var(--freshMint);
 }
 
 h2,
@@ -22,6 +23,7 @@ h4,
 h5,
 h6 {
   font-weight: var(--semiBold);
+  color: var(--freshMint);
 }
 
 p{
