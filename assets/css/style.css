@@ -14,7 +14,6 @@ body {
 
 h1 {
   font-weight: var(--bold);
-  color: var(--freshMint);
 }
 
 h2,
@@ -23,13 +22,14 @@ h4,
 h5,
 h6 {
   font-weight: var(--semiBold);
-  color: var(--freshMint);
 }
 
 p{
   /* 14 pixel */
   font-size: var(--pMobile) 
 }
+
+
 
 /*  */
 /* Variables */
@@ -130,6 +130,9 @@ footer{
   padding-bottom: var(--sectionPaddingSmlMobile);
   padding-top: var(--sectionPaddingSmlMobile);
 
+}
+.kontaktInfo{
+  display: flex;
 }
 .nyhedsbrevContainer{
   display: flex;
