@@ -128,7 +128,22 @@ p{
   padding-bottom: var(--sponsorPaddingMobile);
   padding-top: var(--sponsorPaddingMobile);
   color: white;
+  text-align: center;
+
 }
+.sponsor h2{
+  color: white;
+
+}
+.sponsbillede{
+  display: flex;
+  justify-content: center;
+  padding-top: var(--sponsorPaddingMobile);
+  padding-bottom: var(--sponsorPaddingMobile);
+  gap: 3rem;
+  
+}
+
 footer{
   display: flex;
   flex-direction: column;
@@ -156,15 +171,33 @@ footer section{
   min-width: 280px;
   text-align: center;
   border-radius: 6px;
+  padding-top: var(--sponsorPaddingMobile);
+  padding-bottom: var(--sectionPaddingSmlMobile);
+  
+}
+.nyhedsbrev h3{
+  padding-bottom: var(--sectionPaddingSmlMobile);
+  color: white;
+}
+.nyhedsbrev input{
+  margin-bottom: var(--sponsorPaddingMobile);
+  padding: var(--textPaddingSpacingMobile);
+  border-radius: 6px;
+  border: none;
+  width: 70%;
 }
 input::placeholder{
   text-align: center;
 }
+
 button{
   background: var(--clearSky);
   color: white;
-  width: 80%;
+  width: 70%;
   border: none;
+  padding: var(--textPaddingSpacingMobile);
+  border-radius: 6px;
+
 }
 .footerDisclaimer{
   text-align: center;
