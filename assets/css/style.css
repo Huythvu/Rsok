@@ -122,68 +122,67 @@ p{
 /* Header / Nav */
 /* Main / Article / Aside */
 /* Footer */
-            .read-more {
-              display: none;
-            }
+.read-more {
+display: none;
+}
       
-            /* Label styling */
-            .read-more-label {
-              color: #007bff;
-              cursor: pointer;
-              text-decoration: underline;
-            }
+/* Label styling */
+.read-more-label {
+color: #007bff;
+cursor: pointer;
+text-decoration: underline;
+}
       
-            .read-more-label:hover {
-              text-decoration: none;
-            }
+.read-more-label:hover {
+text-decoration: none;
+}
       
-            /* Fullscreen div (hidden by default) */
-            .fullscreen-content {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100vw;
-              height: 100vh;
-              background-color:var(--fernLeaf);
-              color: white;
-              padding: 20px;
-              box-sizing: border-box;
-              z-index: 1;
-              overflow: auto;
-              pointer-events: none;
-              opacity: 0;
-              transform: translateX(-150vw);
-              /* Start off-screen to the left */
-              transition: transform 1s ease;
-              overflow: hidden;
-            }
-            .fullscreen-content a {
-              text-decoration: none;
-              display: block;
-              color: white;
-            
-            }
+/* Fullscreen div (hidden by default) */
+.fullscreen-content {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background-color:var(--fernLeaf);
+color: white;
+padding: 20px;
+box-sizing: border-box;
+z-index: 1;
+overflow: auto;
+pointer-events: none;
+opacity: 0;
+transform: translateX(-150vw);
+/* Start off-screen to the left */
+transition: transform 1s ease;
+overflow: hidden;
+}
+.fullscreen-content a {
+text-decoration: none;
+display: block;
+color: white;
+}
       
-            /* Show fullscreen content when checked */
-            .read-more:checked~.fullscreen-content {
-              opacity: 1;
-              transform: translate(0, 0);
-              z-index: 2;
-            }
-            nav li{
-              list-style-type: none;
-              padding-top:var(--sponsorPaddingMobile);
-            }
-            nav li a{
-              pointer-events: auto;
+/* Show fullscreen content when checked */
+.read-more:checked~.fullscreen-content {
+opacity: 1;
+transform: translate(0, 0);
+z-index: 2;
+}
+nav li{
+list-style-type: none;
+padding-top:var(--sponsorPaddingMobile);
+}
+nav li a{
+pointer-events: auto;
               
-            }
-            i {
-              position: absolute;
-              top: var(--sponsorPaddingMobile);
-              left: var(--sponsorPaddingMobile);
-              z-index: 3;
-            }
+}
+i {
+position: absolute;
+top: var(--sponsorPaddingMobile);
+left: var(--sponsorPaddingMobile);
+z-index: 3;
+}
 .sponsor{
   background: var(--fernLeaf);
   padding-bottom: var(--sponsorPaddingMobile);
@@ -272,11 +271,19 @@ button{
 .footerDisclaimer p{
   font-size: var(--breadCrumbsMobile);
 }
-/* 
-* Important information is higlighted
-! Deprecated method, do not use
-TODO
-?
 
-FIXME: This is a problem
-*/
+/* Forside */
+
+/* */
+/* Orienteringsløb */
+
+/* */
+/* træning og aktivitet */
+
+/* */
+/* Medlemsskab */
+
+/* */
+/* Kontakt */
+
+/* */ 
