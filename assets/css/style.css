@@ -172,6 +172,7 @@ p{
             }
             nav li{
               list-style-type: none;
+              padding-top:var(--sponsorPaddingMobile);
             }
             nav li a{
               pointer-events: auto;
@@ -179,13 +180,10 @@ p{
             }
             i {
               position: absolute;
-              top: 10px;
-              left: 10px;
+              top: var(--sponsorPaddingMobile);
+              left: var(--sponsorPaddingMobile);
               z-index: 3;
             }
-.velkommen{
-  padding-top:var(--sectionPaddingSmlMobile);
-}
 .sponsor{
   background: var(--fernLeaf);
   padding-bottom: var(--sponsorPaddingMobile);
