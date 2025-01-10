@@ -122,7 +122,27 @@ p{
 /* Header / Nav */
 /* Main / Article / Aside */
 /* Footer */
+.read-more {
+  display: none;
+}
 
+.read-more-content {
+  display: none;
+}
+
+.read-more:checked ~ .read-more-content {
+  display: inline;
+}
+
+.read-more-label {
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.read-more-label:hover {
+  text-decoration: none;
+}
 .sponsor{
   background: var(--fernLeaf);
   padding-bottom: var(--sponsorPaddingMobile);
@@ -130,6 +150,12 @@ p{
   color: white;
   text-align: center;
 
+}
+span a{
+  display: block;
+  z-index: 2;
+  text-decoration: none;
+  color:var(--fernLeaf);
 }
 .sponsor h2{
   color: white;
