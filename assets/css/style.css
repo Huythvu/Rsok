@@ -57,7 +57,7 @@ p{
   --linksMobile: 0.875rem;
 
   --navBarDesktop: 1rem;
-  --navBarMobile: 0.875rem;
+  --navBarMobile: 2rem;
 
   --footerTextDesktop: 3rem;
   --footerTextMobile: 1.5rem;
@@ -119,97 +119,109 @@ p{
 /* My Styling */
 /*  *
 
+/*  */
 /* Header / Nav */
-/* Main / Article / Aside */
-/* Footer */
-.read-more {
-display: none;
+/*  */
+
+nav{
+  width: 100vw;
+  height: 60px;
+  background: var(--fernLeaf);
+  display: flex;
+  justify-content: space-between;
+  padding-right: var(--navBarMobile);
+  padding-left: var(--navBarMobile);
 }
-      
-/* Label styling */
-.read-more-label {
-color: #007bff;
-cursor: pointer;
-text-decoration: underline;
+/* Burgermenu icon og position */
+nav .burgerMenuLabel i{
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 30px;
+  transform: translate(0, -50%);
 }
-      
-.read-more-label:hover {
-text-decoration: none;
+nav .loginIcon{
+display: flex;
+align-items: center;
 }
-      
-/* Fullscreen div (hidden by default) */
+nav i{
+  font-size: var(--navBarMobile);
+  color: var(--white);
+}
+
+/* Fjerner checkbox iconet så kun burgermenu icon er visable*/
+.burgerMenu {
+  display: none;
+}
+/* Vores BurgerMenu content*/
 .fullscreen-content {
-position: fixed;
-top: 0;
-left: 0;
-width: 100vw;
-height: 100vh;
-background-color:var(--fernLeaf);
-color: white;
-padding: 20px;
-box-sizing: border-box;
-z-index: 1;
-overflow: auto;
-pointer-events: none;
-opacity: 0;
-transform: translateX(-150vw);
-/* Start off-screen to the left */
-transition: transform 1s ease;
-overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--fernLeaf);
+  pointer-events: none;
+
+  /* Transition effekt hvor den scroller ind. Den starter ude som default. */
+  transform: translateX(-150vw);
+  transition: transform 1s ease;
 }
 .fullscreen-content a {
-text-decoration: none;
-display: block;
-color: white;
+  font-weight: var(--semiBold);
+  text-decoration: none;
+  color: white;
 }
-      
-/* Show fullscreen content when checked */
-.read-more:checked~.fullscreen-content {
-opacity: 1;
-transform: translate(0, 0);
-z-index: 2;
+
+
+/* Viser Fullscreen when checked og position 0 0 under transition for scroll in effekt */
+.burgerMenu:checked~.fullscreen-content {
+  transform: translate(0, 0);
 }
-nav li{
-list-style-type: none;
-padding-top:var(--sponsorPaddingMobile);
+
+nav ul{
+    padding-top: 60px;
 }
-nav li a{
-pointer-events: auto;
-              
+nav ul li {
+  padding:0 0 var(--navBarMobile) var(--navBarMobile);
+  list-style-type: none;
 }
-i {
-position: absolute;
-top: var(--sponsorPaddingMobile);
-left: var(--sponsorPaddingMobile);
-z-index: 3;
+/* Unden pointer kan vi ikke click på anchorsne. */
+nav li a {
+  font-size: var(--navBarMobile);
+  pointer-events: auto;
 }
+
+/*  */
+/* Main / Article / Aside */
+/*  */
+
+/*  */
+/* Sponsor sektion */
+/*  */
 .sponsor{
   background: var(--fernLeaf);
   padding-bottom: var(--sponsorPaddingMobile);
   padding-top: var(--sponsorPaddingMobile);
   color: white;
   text-align: center;
+}
 
-}
-span a{
-  display: block;
-  z-index: 2;
-  text-decoration: none;
-  color:var(--fernLeaf);
-}
 .sponsor h2{
   color: white;
-
 }
-.sponsbillede{
+
+.sponsorBillede{
   display: flex;
   justify-content: center;
   padding-top: var(--sponsorPaddingMobile);
   padding-bottom: var(--sponsorPaddingMobile);
-  gap: 3rem;
-  
+  gap: 3rem; 
 }
 
+/*  */
+/* Footer */
+/*  */
 footer{
   display: flex;
   flex-direction: column;
@@ -272,18 +284,26 @@ button{
   font-size: var(--breadCrumbsMobile);
 }
 
+/*  */
 /* Forside */
+/*  */
+
 
 /* */
 /* Orienteringsløb */
+/*  */
+
 
 /* */
 /* træning og aktivitet */
+/*  */
+
 
 /* */
 /* Medlemsskab */
+/*  */
+
 
 /* */
 /* Kontakt */
-
 /* */ 
