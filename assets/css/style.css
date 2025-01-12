@@ -135,7 +135,7 @@ nav{
 /* Burgermenu icon og position */
 nav .burgerMenuLabel i{
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 30px;
   left: 30px;
   transform: translate(0, -50%);
@@ -156,6 +156,7 @@ nav i{
 /* Vores BurgerMenu content*/
 .fullscreen-content {
   position: absolute;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100vw;
@@ -297,6 +298,81 @@ button{
 /* */
 /* træning og aktivitet */
 /*  */
+figure img {
+  width: 100vw;
+  /* Display block because without it all figure img has a buttom margin for some reason */
+  display: block;
+}
+h2{
+  padding-top: var(--sectionPaddingSmlMobile);
+}
+.TOA p{
+padding-top: var(--textPaddingSpacingMobile);
+}
+details > summary{
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: -1.5rem;
+  list-style-type: none;
+  font-style: italic;
+  font-weight: var(--semiBold);
+  color:var(--clearSky)
+}
+/* Her bruges der content funktionen for details open og default closed. 
+after eller before nødvendig for content til at virke */
+details[open] summary::after{
+  content: "Læs mindre";
+}
+details summary::after{
+  content: "Læs mere";
+}
+
+/* Da hver TOA article er parrent til og container for summary 
+bruges den til placering af vores detail/summary knap buttom -1.5rem*/
+.TOA article{
+  position: relative;
+}
+
+/* Styling and functions for all images that are in grids */
+figure:not(header figure) {
+  padding-top: var(--sectionPaddingSmlMobile);
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--textPaddingSpacingMobile);
+}
+.TOA section figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Familie sport section */
+.TOA-FamilieSport figure{
+  grid-template-columns: calc(50% - 4px) calc(50% - 4px);
+}
+.TOA-FamilieSport figure img:nth-of-type(1){
+  object-position: 80%;
+}
+.TOA-FamilieSport figure img:nth-of-type(3){
+  grid-column: 1/-1;
+}
+/* Børn og unge section */
+.TOA-BørnOgUnge figure img{
+  aspect-ratio: 1/1;
+}
+/* Seniorafdeling section */
+.TOA-Seniorafdeling figure{
+  grid-template-columns: calc(50% - 4px) calc(50% - 4px);
+}
+.TOA-Seniorafdeling figure img:nth-of-type(n+2){
+  aspect-ratio: 1/1;
+  object-position: 80%;
+}
+.TOA-Seniorafdeling figure img:nth-of-type(1){
+  aspect-ratio: 2/1;
+  grid-column: 1/-1;
+}
 
 
 /* */
