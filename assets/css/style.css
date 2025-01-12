@@ -155,7 +155,7 @@ nav i{
 }
 /* Vores BurgerMenu content*/
 .fullscreen-content {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
@@ -163,6 +163,7 @@ nav i{
   height: 100vh;
   background-color: var(--fernLeaf);
   pointer-events: none;
+  overflow: hidden;
 
   /* Transition effekt hvor den scroller ind. Den starter ude som default. */
   transform: translateX(-150vw);
@@ -174,11 +175,16 @@ nav i{
   color: white;
 }
 
-
+/* Makes the burgermenu icon fixed when checked
+so it doesnt dissapear when scrolling. */
+.burgerMenu:checked~.burgerMenuLabel i{
+  position: fixed;
+}
 /* Viser Fullscreen when checked og position 0 0 under transition for scroll in effekt */
 .burgerMenu:checked~.fullscreen-content {
   transform: translate(0, 0);
 }
+
 
 nav ul{
     padding-top: 60px;
@@ -298,6 +304,24 @@ button{
 /* */
 /* træning og aktivitet */
 /*  */
+.TOABreadcrumbs{
+  padding-top: var(--textPaddingSpacingMobile);
+}
+.TOABreadcrumbs a p{
+  display: inline;
+  color: var(--black);
+}
+.TOABreadcrumbs a{
+  text-decoration: none;
+}
+.TOABreadcrumbs a:not(:last-of-type)::after{
+  content: " >";
+  color: var(--black);
+}
+.headerTOA h1{
+  text-align: center;
+  padding: var(--paddingMedMobile);
+}
 figure img {
   width: 100vw;
   /* Display block because without it all figure img has a buttom margin for some reason */
@@ -335,7 +359,7 @@ bruges den til placering af vores detail/summary knap buttom -1.5rem*/
 }
 
 /* Styling and functions for all images that are in grids */
-figure:not(header figure) {
+figure:not(.headerTOA figure) {
   padding-top: var(--sectionPaddingSmlMobile);
   display: grid;
   grid-template-rows: auto;
