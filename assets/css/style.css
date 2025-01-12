@@ -273,7 +273,44 @@ button{
 }
 
 /* Forside */
+.breadcrumb{
+  padding-bottom: var(--sectionPaddingSmlMobile);
+}
+.breadcrumb a{
+  text-decoration: none;
+  font-size: var(--breadCrumbsMobile);
+  color: var(--black);
+}
+.velkommen h1{
+display: flex;
+justify-content: center;
+padding-bottom: var(--paddingMedMobile);
+}
+.velkommen p{
+  padding-bottom: var(--sectionPaddingSmlMobile);
+}
+.foralle h2{
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
+.foralle p{
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
+.foralle img{
+  padding-bottom: var(--sectionPaddingSmlMobile);
+}
+.tilbyder h2, p{
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
 
+aside{
+  background: var(--clearSky);
+  border-radius: 5%;
+  padding-top:var(--paddingSmlMobile);
+  padding-bottom:var(--paddingSmlMobile);
+}
+.random{
+  padding-bottom: var(--sectionPaddingSmlMobile);
+}
 /* */
 /* Orienteringsløb */
 
