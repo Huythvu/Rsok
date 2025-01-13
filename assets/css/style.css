@@ -26,9 +26,9 @@ h6 {
   color: var(--freshMint);
 }
 
-p{
+p {
   /* 14 pixel */
-  font-size: var(--pMobile) 
+  font-size: var(--pMobile)
 }
 
 
@@ -37,7 +37,7 @@ p{
 /* Variables */
 /*  */
 :root {
-/* Sizes */
+  /* Sizes */
   --h1Desktop: 3rem;
   --h1Mobile: 2.25rem;
 
@@ -63,42 +63,42 @@ p{
   --footerTextMobile: 1.5rem;
 
 
-/* Weigts */
---regular: 400;
---medium: 500;
---semiBold: 600;
---bold: 700;
+  /* Weigts */
+  --regular: 400;
+  --medium: 500;
+  --semiBold: 600;
+  --bold: 700;
 
-/* Paddings & Margins */
---paddingSmlDesktop: 1rem;
---paddingSmlMobile: 0.5rem;
+  /* Paddings & Margins */
+  --paddingSmlDesktop: 1rem;
+  --paddingSmlMobile: 0.5rem;
 
---paddingMedDesktop: 1.5rem;
---paddingMedMobile: 1rem;
+  --paddingMedDesktop: 1.5rem;
+  --paddingMedMobile: 1rem;
 
---paddingLrgDesktop: 2rem;
---paddingLrgMobile: 1.5rem;
+  --paddingLrgDesktop: 2rem;
+  --paddingLrgMobile: 1.5rem;
 
---sectionPaddingSmlDesktop: 3rem;
---sectionPaddingSmlMobile: 2rem;
+  --sectionPaddingSmlDesktop: 3rem;
+  --sectionPaddingSmlMobile: 2rem;
 
---textPaddingSpacingDesktop: 1rem;
---textPaddingSpacingMobile: 0.5rem;
+  --textPaddingSpacingDesktop: 1rem;
+  --textPaddingSpacingMobile: 0.5rem;
 
---sponsorPaddingMobile: 1rem;
+  --sponsorPaddingMobile: 1rem;
 
 
 
-/* Colors */
-  --deepForest: #2E4600; 
-  --fernLeaf: #588C42; 
+  /* Colors */
+  --deepForest: #2E4600;
+  --fernLeaf: #588C42;
   --freshMint: #82B56D;
   --clearSky: #87CEEB;
   --paleStone: #F5F1E4;
 
   --black: #000000;
   --white: #ffffff;
-  --grey: #D9D9D9; 
+  --grey: #D9D9D9;
 
 
 }
@@ -109,6 +109,7 @@ p{
 .flex {
   display: flex;
 }
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -123,67 +124,72 @@ p{
 /* Main / Article / Aside */
 /* Footer */
 .read-more {
-display: none;
+  display: none;
 }
-      
+
 /* Label styling */
 .read-more-label {
-color: #007bff;
-cursor: pointer;
-text-decoration: underline;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
 }
-      
+
 .read-more-label:hover {
-text-decoration: none;
+  text-decoration: none;
 }
-      
+
 /* Fullscreen div (hidden by default) */
 .fullscreen-content {
-position: fixed;
-top: 0;
-left: 0;
-width: 100vw;
-height: 100vh;
-background-color:var(--fernLeaf);
-color: white;
-padding: 20px;
-box-sizing: border-box;
-z-index: 1;
-overflow: auto;
-pointer-events: none;
-opacity: 0;
-transform: translateX(-150vw);
-/* Start off-screen to the left */
-transition: transform 1s ease;
-overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--fernLeaf);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+  overflow: auto;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-150vw);
+  /* Start off-screen to the left */
+  transition: transform 1s ease;
+  overflow: hidden;
 }
+
 .fullscreen-content a {
-text-decoration: none;
-display: block;
-color: white;
+  text-decoration: none;
+  display: block;
+  color: white;
 }
-      
+
 /* Show fullscreen content when checked */
 .read-more:checked~.fullscreen-content {
-opacity: 1;
-transform: translate(0, 0);
-z-index: 2;
+  opacity: 1;
+  transform: translate(0, 0);
+  z-index: 2;
 }
-nav li{
-list-style-type: none;
-padding-top:var(--sponsorPaddingMobile);
+
+nav li {
+  list-style-type: none;
+  padding-top: var(--sponsorPaddingMobile);
 }
-nav li a{
-pointer-events: auto;
-              
+
+nav li a {
+  pointer-events: auto;
+
 }
+
 i {
-position: absolute;
-top: var(--sponsorPaddingMobile);
-left: var(--sponsorPaddingMobile);
-z-index: 3;
+  position: absolute;
+  top: var(--sponsorPaddingMobile);
+  left: var(--sponsorPaddingMobile);
+  z-index: 3;
 }
-.sponsor{
+
+.sponsor {
   background: var(--fernLeaf);
   padding-bottom: var(--sponsorPaddingMobile);
   padding-top: var(--sponsorPaddingMobile);
@@ -191,26 +197,29 @@ z-index: 3;
   text-align: center;
 
 }
-span a{
+
+span a {
   display: block;
   z-index: 2;
   text-decoration: none;
-  color:var(--fernLeaf);
+  color: var(--fernLeaf);
 }
-.sponsor h2{
+
+.sponsor h2 {
   color: white;
 
 }
-.sponsbillede{
+
+.sponsbillede {
   display: flex;
   justify-content: center;
   padding-top: var(--sponsorPaddingMobile);
   padding-bottom: var(--sponsorPaddingMobile);
   gap: 3rem;
-  
+
 }
 
-footer{
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -219,19 +228,24 @@ footer{
   background: var(--deepForest);
   color: white;
 }
-footer p{
+
+footer p {
   font-size: var(--footerTextMobile);
 }
-footer section{
-    padding-bottom: var(--sectionPaddingSmlMobile);
+
+footer section {
+  padding-bottom: var(--sectionPaddingSmlMobile);
 }
-.kontaktInfo p:nth-of-type(1){
+
+.kontaktInfo p:nth-of-type(1) {
   padding-bottom: var(--textPaddingSpacingMobile);
 }
-.socials p{
-    padding-bottom: var(--textPaddingSpacingMobile);
-  }
-.nyhedsbrev{
+
+.socials p {
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
+
+.nyhedsbrev {
   background: var(--fernLeaf);
   width: 50vw;
   min-width: 280px;
@@ -239,24 +253,27 @@ footer section{
   border-radius: 6px;
   padding-top: var(--sponsorPaddingMobile);
   padding-bottom: var(--sectionPaddingSmlMobile);
-  
+
 }
-.nyhedsbrev h3{
+
+.nyhedsbrev h3 {
   padding-bottom: var(--sectionPaddingSmlMobile);
   color: white;
 }
-.nyhedsbrev input{
+
+.nyhedsbrev input {
   margin-bottom: var(--sponsorPaddingMobile);
   padding: var(--textPaddingSpacingMobile);
   border-radius: 6px;
   border: none;
   width: 70%;
 }
-input::placeholder{
+
+input::placeholder {
   text-align: center;
 }
 
-button{
+button {
   background: var(--clearSky);
   color: white;
   width: 70%;
@@ -265,10 +282,12 @@ button{
   border-radius: 6px;
 
 }
-.footerDisclaimer{
+
+.footerDisclaimer {
   text-align: center;
 }
-.footerDisclaimer p{
+
+.footerDisclaimer p {
   font-size: var(--breadCrumbsMobile);
 }
 
@@ -276,13 +295,13 @@ button{
 
 /* */
 /* Orienteringsløb */
-h1{
+h1 {
   text-align: center;
 }
 
-.HogHbillede{
+.HogHbillede {
   width: 100vw;
-  padding-top:var(--sectionPaddingSmlMobile);
+  padding-top: var(--sectionPaddingSmlMobile);
   padding-bottom: var(--textPaddingSpacingMobile);
   display: block;
 }
@@ -303,22 +322,116 @@ h1{
 }
 
 .Okortbillede {
-  width: 100vw;
-  height: 30vh;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   padding-bottom: var(--textPaddingSpacingMobile);
   display: block;
 }
 
 .detaljeretkortbillede {
-  width: 100vw;
-  height: 30vh;
-  padding-bottom:var(--textPaddingSpacingMobile) ;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-bottom: var(--textPaddingSpacingMobile);
   display: block;
 }
 
-.detaljeretkort{
+figure{
+  width: 100vw;
+  height: 40vh;
+  aspect-ratio: 2/1;
+} 
+
+.flex {
+  display: block;
+}
+
+.detaljeretkort {
   padding-bottom: var(--textPaddingSpacingMobile);
 }
+
+/* mediaequerries for Orienteringsløb */
+
+@media (min-width: 1440px) {
+
+  h1{
+    font-size: var(--h1Desktop);
+  }
+
+  .HogHbillede {
+    width: 95vw;
+    height: 80vh;
+    padding-bottom: var(--sectionPaddingSmlDesktop);
+  }
+
+  .HogH h2{
+    font-size: var(--h2Desktop);
+    padding-bottom: var(--textPaddingSpacingDesktop);
+  }
+
+  .HogH p {
+    font-size: 24px;
+    padding-bottom: var(--textPaddingSpacingDesktop);
+    padding-top: 0;
+  }
+
+  .fodtøj {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5 1fr;
+  }
+
+  .fodtøj h2{
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .fodtøj img{
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+
+  .fodtøj p{
+    grid-column-start: 1;
+  }
+
+  .fodtøj h2{
+    font-size: var(--h2Desktop);
+  }
+
+  .fodtøj p {
+    font-size: 24px;
+  }
+
+  .fodtøjbillede{
+    width: 50vw;
+    height: 53vh;
+    padding-bottom: var(--textPaddingSpacingDesktop);
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--sectionPaddingSmlDesktop);
+  }
+
+  .kortbilleder .detaljeretkortbillede, .Okortbillede {
+    width: 35vw;
+    height: 35vh;
+  }
+
+  .detaljeretkort h2 {
+    font-size: var(--h2Desktop);
+    padding-top: var(--sectionPaddingSmlDesktop);
+  }
+
+  .flex p {
+    font-size: 24px;
+    width: 65ch;
+  }  
+}
+
 /* */
 /* træning og aktivitet */
 
@@ -328,4 +441,4 @@ h1{
 /* */
 /* Kontakt */
 
-/* */ 
+/* */
