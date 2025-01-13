@@ -303,11 +303,51 @@ button{
 /* Medlemsskab */
 .Medlemskabcards{
   background-color: var(--clearSky);
-  
+  padding: 16px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+  height: 200px;
+  margin: 1rem;
+
 }
 /*  */
 
 
 /* */
 /* Kontakt */
+.kontaktcards {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+  margin: 1rem;
+}
+
+.kontaktcards img {
+  width: 150px;
+}
+
+.kontaktcards p,
+h1,
+h2,
+h3 {
+  margin: 1rem;
+}
+
+.links {
+  background-color: var(--clearSky);
+  padding: 25px;
+  padding-top: 10px;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+}
 /* */ 
