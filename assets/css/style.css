@@ -342,5 +342,16 @@ h3 {
   background-color: var(--clearSky);
   padding: 25px;
   padding-top: 10px;
+  margin-top: 3rem;
+}
+.links h2{
+  color: var(--black);
+}
+.details-kontakt summary{
+  padding: 1rem;
+  background-color: var(--grey);
+  margin: 1rem;
+  margin-top: 0;
+  font-family: "Arial", sans-serif;
 }
 /* */ 
