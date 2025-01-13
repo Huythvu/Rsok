@@ -276,7 +276,49 @@ button{
 
 /* */
 /* Orienteringsløb */
+h1{
+  text-align: center;
+}
 
+.HogHbillede{
+  width: 100vw;
+  padding-top:var(--sectionPaddingSmlMobile);
+  padding-bottom: var(--textPaddingSpacingMobile);
+  display: block;
+}
+
+.HogH p {
+  padding-top: var(--textPaddingSpacingMobile);
+  padding-bottom: var(--sectionPaddingSmlMobile);
+}
+
+.fodtøjbillede {
+  width: 100vw;
+  padding-bottom: var(--textPaddingSpacingMobile);
+  display: block;
+}
+
+.fodtøj p {
+  padding-bottom: var(--sectionPaddingSmlMobile);
+}
+
+.Okortbillede {
+  width: 100vw;
+  height: 30vh;
+  padding-bottom: var(--textPaddingSpacingMobile);
+  display: block;
+}
+
+.detaljeretkortbillede {
+  width: 100vw;
+  height: 30vh;
+  padding-bottom:var(--textPaddingSpacingMobile) ;
+  display: block;
+}
+
+.detaljeretkort{
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
 /* */
 /* træning og aktivitet */
 
