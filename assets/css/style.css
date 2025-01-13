@@ -303,16 +303,12 @@ button{
 /* Medlemsskab */
 .Medlemskabcards{
   background-color: var(--clearSky);
-  padding: 16px;
   border-radius: 15px;
   text-align: center;
-  display: flex;
-  justify-content: space-between;
-  width: 340px;
+  width: 90vw;
   height: 200px;
   margin: 1rem;
-  box-sizing: border-box;
-
+  padding: 1.5rem;
 }
 /*  */
 
@@ -331,6 +327,7 @@ button{
 }
 .kontaktcards img {
   width: 150px;
+  text-align: center;
 }
 
 .kontaktcards p,
