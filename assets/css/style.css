@@ -301,7 +301,12 @@ padding-bottom: var(--paddingMedMobile);
 .tilbyder h2, p{
   padding-bottom: var(--textPaddingSpacingMobile);
 }
-
+.historie {
+  padding-top: var(--sectionPaddingSmlMobile);
+}
+.forsidenyhed{
+  padding-top:var(--sectionPaddingSmlMobile);
+}
 aside{
   background: var(--clearSky);
   border-radius: 5%;
