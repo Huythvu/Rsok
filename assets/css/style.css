@@ -311,6 +311,7 @@ button{
   width: 340px;
   height: 200px;
   margin: 1rem;
+  box-sizing: border-box;
 
 }
 /*  */
@@ -318,17 +319,16 @@ button{
 
 /* */
 /* Kontakt */
-.kontaktcards {
+.kontaktcards{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   border-radius: 15px;
   text-align: center;
   display: flex;
   justify-content: space-between;
-  width: 340px;
+  width: 380px;
   margin: 1rem;
 }
-
 .kontaktcards img {
   width: 150px;
 }
@@ -338,6 +338,7 @@ h1,
 h2,
 h3 {
   margin: 1rem;
+
 }
 
 .links {
@@ -345,10 +346,4 @@ h3 {
   padding: 25px;
   padding-top: 10px;
 }
-
-.test {
-  display: flex;
-  flex-direction: column;
-}
-
 /* */ 
