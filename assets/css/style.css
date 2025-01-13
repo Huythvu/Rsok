@@ -289,6 +289,10 @@ padding-bottom: var(--paddingMedMobile);
 .velkommen p{
   padding-bottom: var(--sectionPaddingSmlMobile);
 }
+.forsidebilleder{
+  width: 100vw;
+  height: auto;
+}
 .foralle h2{
   padding-bottom: var(--textPaddingSpacingMobile);
 }
