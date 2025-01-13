@@ -333,7 +333,7 @@ h2{
 .TOA p{
 padding-top: var(--textPaddingSpacingMobile);
 }
-details > summary{
+.detailsMobile > summary{
   position: absolute;
   z-index: 1;
   left: 0;
@@ -343,12 +343,18 @@ details > summary{
   font-weight: var(--semiBold);
   color:var(--clearSky)
 }
+.detailsDesktop{
+  display: none;
+}
+.detailsDesktop summary{
+  display: none;
+}
 /* Her bruges der content funktionen for details open og default closed. 
 after eller before nødvendig for content til at virke */
-details[open] summary::after{
+.detailsMobile[open] summary::after{
   content: "Læs mindre";
 }
-details summary::after{
+.detailsMobile summary::after{
   content: "Læs mere";
 }
 
@@ -398,6 +404,26 @@ figure:not(.headerTOA figure) {
   grid-column: 1/-1;
 }
 
+@media (min-width: 1440px){
+.detailsMobile{
+display: none
+}
+.detailsDesktop{
+  display: inline;
+}
+.TOA > section:not(.TOA-Introduktion){
+  display: flex;
+}
+.TOA figure{
+  width: 50vw;
+}
+.TOA section:not(.TOA-Introduktion) article{
+  width: 50vw;
+}
+.TOA p{
+  font-size: 10vw;
+}
+}
 
 /* */
 /* Medlemsskab */
