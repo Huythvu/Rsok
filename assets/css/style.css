@@ -290,7 +290,7 @@ padding-bottom: var(--paddingMedMobile);
   padding-bottom: var(--sectionPaddingSmlMobile);
 }
 .forsidebilleder{
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 .foralle h2{
@@ -319,6 +319,26 @@ aside{
 }
 .random{
   padding-bottom: var(--sectionPaddingSmlMobile);
+}
+
+@media (min-width: 1024px){
+
+.forsideDF{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.desktopaside{
+  width: 40%;
+  padding-top:var(--sectionPaddingSmlMobile);
+  border-radius: 0%;
+}
+.desktopaside p{
+  font-size: var(--pDesktop);
+}
+.aside{
+  display: none;
+}
 }
 /* */
 /* Orienteringsløb */
