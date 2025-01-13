@@ -347,15 +347,76 @@ h3 {
   padding: 25px;
   padding-top: 10px;
   margin-top: 3rem;
+
 }
 .links h2{
   color: var(--black);
+  
 }
-.details-kontakt summary{
+.details-kontakt-mobile summary{
   padding: 1rem;
   background-color: var(--grey);
   margin: 1rem;
   margin-top: 0;
   font-family: "Arial", sans-serif;
 }
-/* */ 
+.details-kontakt-desktop{
+  display: none;
+}
+.details-kontakt-desktop summary{
+  display: none;
+}
+
+ /*  */
+/* media til medlemsskab */
+@media only screen and (min-width: 1440px){
+.Medlemskabcards{
+  max-width: 300px;
+}
+.medlemskabpriser{
+  display: flex;
+  justify-content: space-around;
+}
+}
+
+/*  */
+
+/* media til kontakt */
+@media only screen and (min-width: 1440px) {
+.kontaktcards{
+  min-width: 300px;
+  display: flex;
+}
+.details-kontakt-mobile{
+  display: none;
+}
+.details-kontakt-desktop{
+  display: grid;
+
+}
+.details-kontakt-desktop summary{
+  display: none;
+}
+.Bestyrelse, .Kontaktpersoner, .Udvalg{
+
+
+}
+.Bestyrelse{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.Kontaktpersoner{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+}
+.Udvalg{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+
+}
+/*  */
