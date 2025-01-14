@@ -397,10 +397,6 @@ h3 {
 .details-kontakt-desktop summary{
   display: none;
 }
-.Bestyrelse, .Kontaktpersoner, .Udvalg{
-
-
-}
 .Bestyrelse{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -416,7 +412,5 @@ h3 {
   grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
-
-
 }
 /*  */
