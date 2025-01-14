@@ -165,7 +165,7 @@ nav i {
 
   /* Transition effekt hvor den scroller ind. Den starter ude som default. */
   transform: translateX(-150vw);
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
 }
 
 .fullscreen-content a {
@@ -467,7 +467,7 @@ figure:not(.headerTOA figure) {
   }
 
   .TOA section figure {
-    padding: 0;
+    padding-top: var(--textPaddingSpacingDesktop);
   }
 
   /*  */
