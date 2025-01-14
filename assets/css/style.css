@@ -298,9 +298,153 @@ button {
 
 /*  */
 /* Forside */
-/*  */
+.breadcrumb{
+  padding-bottom: var(--sectionPaddingSmlMobile);
+}
+.breadcrumb a{
+  text-decoration: none;
+  font-size: var(--breadCrumbsMobile);
+  color: var(--black);
+}
+.velkommen h1{
+display: flex;
+justify-content: center;
+padding-bottom: var(--paddingMedMobile);
+}
+.velkommen p{
+  padding-bottom: var(--sectionPaddingSmlMobile);
+}
+.forsidebilleder{
+  width: 100%;
+  height: auto;
+}
+.h2{
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
+.foralle p{
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
+.foralle img{
+  padding-bottom: var(--sectionPaddingSmlMobile);
+}
+.tilbyder{
+  padding-top: var(--sectionPaddingSmlMobile);
+}
+.tilbyder h2, p{
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
+.historie {
+  padding-top: var(--sectionPaddingSmlMobile);
+}
+.forsidenyhed{
+  padding-top:var(--sectionPaddingSmlMobile);
+}
+aside{
+  background: var(--clearSky);
+  border-radius: 5%;
+  padding-top:var(--paddingSmlMobile);
+  padding-bottom:var(--paddingSmlMobile);
+}
+.random{
+  padding-bottom: var(--sectionPaddingSmlMobile);
+}
 
+@media (min-width: 1440px){
+h1 {
+  font-size: 64px;
+}
 
+  h2, h3 {
+  font-size: 48px;
+
+}
+.breadcrumb a{
+  color: var(--grey);
+  font-weight: var(--breadCrumbsDesktop);
+}
+  p, .breadcrumb a{
+    font-size: 24px;
+    padding-bottom: var(--textPaddingSpacingDesktop);
+  }
+
+.forsideDF{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.2fr;
+  grid-template-rows: 0.1fr 0.5fr;
+  gap: 0.5rem;
+  padding: 0;
+}
+.foralle img{
+  aspect-ratio: 1003 / 379;
+  object-fit: cover;
+  padding: 0;
+}
+
+h2{
+  grid-column-start: 3;
+}
+.GridForside {
+  grid-row-start: 2;
+  grid-column: 1/3;
+  padding: 0;
+}
+.desktopaside{
+  grid-column-start: 3;
+  grid-row-start: 2;
+  grid-row: 2/-1;
+  border-radius: 25px;
+}
+nav, .aside, br{
+  display: none;
+}
+/* FOOTER TIL DESKTOP */
+.sponsor{
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+}
+.sponsoroverskrift{
+  display: flex;
+  align-items: center;
+}
+
+footer{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 0.5fr 0.5fr;
+}
+.nyhedsbrevContainer{
+  grid-column-start:3;
+}
+
+.kontaktInfo{
+  grid-column-start: 2;
+  grid-row: 1/3;
+}
+.nyhedsbrev{
+  width: 50%;
+}
+.footerTextAligner{
+  display: grid;
+  grid-column: 1/3;
+  height: 100%;
+}
+.socials{
+  grid-column-start:3;
+}
+}
+.footerDisclaimer {
+grid-column-start: 1;
+grid-column: 1/4;
+}
+/* husk lave font size om */
+.footerDisclaimer p{
+  font-size: 24px;
+}
+/* SLET LOGO */
+.footerLogo{
+  display: none;
+}
 /* */
 /* Orienteringsløb */
 h1 {
@@ -449,12 +593,120 @@ figure{
 /* Medlemsskab */
 .Medlemskabcards{
   background-color: var(--clearSky);
+  border-radius: 15px;
+  text-align: center;
+  width: 90vw;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  max-width: 250px;
   
+}
+.tekst-medlem p{
+margin-left: 1rem;;
+margin-right: 1rem;
+}
+.Medlemskabcards p{
+  font-size: 1.5rem;
 }
 /*  */
 
 
 /* */
 /* Kontakt */
+.kontaktcards{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  margin: 1rem;
+}
+.kontaktcards img {
+  width: 150px;
+  text-align: center;
+}
 
-/* */
+.kontaktcards p,
+h1,
+h2,
+h3 {
+  margin: 1rem;
+
+}
+
+.links {
+  background-color: var(--clearSky);
+  padding: 25px;
+  padding-top: 10px;
+  margin-top: 3rem;
+
+}
+.links h2{
+  color: var(--black);
+  
+}
+.details-kontakt-mobile summary{
+  padding: 1rem;
+  background-color: var(--grey);
+  margin: 1rem;
+  margin-top: 0;
+  font-family: "Arial", sans-serif;
+}
+.details-kontakt-desktop{
+  display: none;
+}
+.details-kontakt-desktop summary{
+  display: none;
+}
+
+ /*  */
+/* media til medlemsskab */
+@media only screen and (min-width: 1440px){
+.Medlemskabcards{
+  max-width: 300px;
+}
+.medlemskabpriser{
+  display: flex;
+  justify-content: space-around;
+}
+}
+
+/*  */
+
+/* media til kontakt */
+@media only screen and (min-width: 1440px) {
+.kontaktcards{
+  min-width: 300px;
+  display: flex;
+}
+.details-kontakt-mobile{
+  display: none;
+}
+.details-kontakt-desktop{
+  display: grid;
+
+}
+.details-kontakt-desktop summary{
+  display: none;
+}
+.Bestyrelse{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.Kontaktpersoner{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+}
+.Udvalg{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+}
+/*  */
