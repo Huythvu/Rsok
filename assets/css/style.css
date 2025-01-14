@@ -293,7 +293,7 @@ padding-bottom: var(--paddingMedMobile);
   width: 100%;
   height: auto;
 }
-.foralle h2{
+.h2{
   padding-bottom: var(--textPaddingSpacingMobile);
 }
 .foralle p{
@@ -301,6 +301,9 @@ padding-bottom: var(--paddingMedMobile);
 }
 .foralle img{
   padding-bottom: var(--sectionPaddingSmlMobile);
+}
+.tilbyder{
+  padding-top: var(--sectionPaddingSmlMobile);
 }
 .tilbyder h2, p{
   padding-bottom: var(--textPaddingSpacingMobile);
@@ -321,7 +324,7 @@ aside{
   padding-bottom: var(--sectionPaddingSmlMobile);
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1440px){
 h1 {
   font-size: 64px;
 }
@@ -369,6 +372,7 @@ h2{
 nav, .aside, br{
   display: none;
 }
+/* FOOTER TIL DESKTOP */
 .sponsor{
   display: flex;
   justify-content: space-between;
