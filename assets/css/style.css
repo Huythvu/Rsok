@@ -369,7 +369,31 @@ h2{
   grid-row: 2/-1;
   border-radius: 25px;
 }
-nav, .aside, br{
+.MobileNav{
+  display:none;
+}
+.DesktopNav{
+  display: flex;
+  background-color: var(--fernLeaf);
+  height: 150px;
+  width: 100vw;
+}
+
+.DesktopNav ol{
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+.DesktopNav img{
+  height: 150px;
+  width: auto;
+}
+
+.DesktopNav a{
+  text-decoration: none;
+  color: var(--white);
+}
+.aside, br{
   display: none;
 }
 /* FOOTER TIL DESKTOP */
