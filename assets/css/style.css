@@ -447,11 +447,120 @@ grid-column: 1/4;
 /* Medlemsskab */
 .Medlemskabcards{
   background-color: var(--clearSky);
+  border-radius: 15px;
+  text-align: center;
+  width: 90vw;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  max-width: 250px;
   
+}
+.tekst-medlem p{
+margin-left: 1rem;;
+margin-right: 1rem;
+}
+.Medlemskabcards p{
+  font-size: 1.5rem;
 }
 /*  */
 
 
 /* */
 /* Kontakt */
-/* */ 
+.kontaktcards{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  margin: 1rem;
+}
+.kontaktcards img {
+  width: 150px;
+  text-align: center;
+}
+
+.kontaktcards p,
+h1,
+h2,
+h3 {
+  margin: 1rem;
+
+}
+
+.links {
+  background-color: var(--clearSky);
+  padding: 25px;
+  padding-top: 10px;
+  margin-top: 3rem;
+
+}
+.links h2{
+  color: var(--black);
+  
+}
+.details-kontakt-mobile summary{
+  padding: 1rem;
+  background-color: var(--grey);
+  margin: 1rem;
+  margin-top: 0;
+  font-family: "Arial", sans-serif;
+}
+.details-kontakt-desktop{
+  display: none;
+}
+.details-kontakt-desktop summary{
+  display: none;
+}
+
+ /*  */
+/* media til medlemsskab */
+@media only screen and (min-width: 1440px){
+.Medlemskabcards{
+  max-width: 300px;
+}
+.medlemskabpriser{
+  display: flex;
+  justify-content: space-around;
+}
+}
+
+/*  */
+
+/* media til kontakt */
+@media only screen and (min-width: 1440px) {
+.kontaktcards{
+  min-width: 300px;
+  display: flex;
+}
+.details-kontakt-mobile{
+  display: none;
+}
+.details-kontakt-desktop{
+  display: grid;
+
+}
+.details-kontakt-desktop summary{
+  display: none;
+}
+.Bestyrelse{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.Kontaktpersoner{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+}
+.Udvalg{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+}
+/*  */
