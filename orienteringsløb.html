@@ -17,7 +17,7 @@
   </head>
   <body>
     <header>
-     <nav>
+      <nav class="MobileNav">
         <input type="checkbox" id="toggle" class="burgerMenu" />
         <label for="toggle" class="burgerMenuLabel"
           ><i class="fa-solid fa-bars"></i
@@ -34,54 +34,197 @@
           </ul>
         </div>
         <!-- RSOK LOGO -->
-        <img src="./assets/img/LOGOMobileRoldSkovOK-min.png" alt="" />
- 
+        <img
+          src="./assets/img/LOGOMobileRoldSkovOK-min.png"
+          alt="Rold skov orienterings Logo"
+          loading="lazy"
+        />
+
         <!-- Login Icon -->
         <div class="loginIcon">
-          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-circle-user"></i>
         </div>
       </nav>
+
+      <nav class="DesktopNav">
+        <ol>
+          <figure>
+            <img
+              src="./assets/img/LOGODesktopRoldSkovOK-min.png"
+              alt="Rold skov orienterings logo"
+              loading="lazy"
+            />
+          </figure>
+          <li><a href="./index.html">Forside</a></li>
+          <li><a href="./orienteringsløb.html">Orienteringsløb</a></li>
+          <li>
+            <a href="./træningOgAktiviteter.html">Træning & Aktivitet</a>
+          </li>
+          <li><a href="./medlem.html">Medlem</a></li>
+          <li><a href="./kontakt.html">Kontakt</a></li>
+          <li><i class="fa-solid fa-circle-user"></i></li>
+        </ol>
+      </nav>
     </header>
-    <main>
+    <main class="o-Løb">
+      <div class="breadCrumbs">
+        <a href="./index.html"><p>Forside</p></a>
+        <a href="#"><p>Orienteringsløb</p></a>
+      </div>
       <h1>Orienteringsløb</h1>
       <section class="HogH">
-          <img  class="HogHbillede" src="./assets/img/OLfornutigtfodtoej2.jpg" alt="billede af folk der løber">
-          <h2>Hjerte og Hjerne</h2>
-          <p>O-løb er motion for hjerte og hjerne. Fordi man både udfordrer sig selv fysisk men også mentalt, når det gælder om at læse kortet og finde posterne på ens bane. Posterne er altid markeret med en rød/hvid skærm i terrænet, og der er ingen opgaver eller spørgsmål, man skal svare på undervejs. Man deltager som oftest individuelt, men til klubløb og mindre træningsløb kan man sagtens følges med andre. Engang imellem arrangeres stafetorientering med 2-3 deltagere på hvert hold.
-          <br>
-          <br>
-          O-løb er både naturoplevelser på skovveje og stier men også i skovbunden udenfor stierne. Det er masser af frisk luft og motion, og det er et forum med aktive og engagerede deltagere, der nyder samværet med andre, naturen på alle årstider og nyder udfordringerne i orienteringen i eget tempo og på det niveau, som den enkelte nu har lyst til at udfolde sig i.
-          <br>
-          <br>
-          Det er for børn og unge, familier med børn, seniorer og pensionister vi byder nemlig alle velkommen til verdens bedste idræt, der forener fysiske udfoldelser med natur, frisk luft og mentale udfordringer med at lave det bedste vejvalg og selvfølgelig finde posterne på ens bane. Vi bruger kort og et kompas, men ikke GPS eller andre tekniske hjælpemidler undervejs på banen kun til at holde styr på tiden og måske se hvor man har været i skoven efter løbet.</p>
+        <img
+          class="HogHbillede"
+          src="./assets/img/OLfornutigtfodtoej2.jpg"
+          alt="billede af folk der løber"
+          loading="lazy"
+        />
+        <h2>Hjerte og Hjerne</h2>
+        <p>
+          O-løb er motion for hjerte og hjerne. Fordi man både udfordrer sig
+          selv fysisk men også mentalt, når det gælder om at læse kortet og
+          finde posterne på ens bane. Posterne er altid markeret med en rød/hvid
+          skærm i terrænet, og der er ingen opgaver eller spørgsmål, man skal
+          svare på undervejs. Man deltager som oftest individuelt, men til
+          klubløb og mindre træningsløb kan man sagtens følges med andre. Engang
+          imellem arrangeres stafetorientering med 2-3 deltagere på hvert hold.
+          <br />
+          <br />
+          O-løb er både naturoplevelser på skovveje og stier men også i
+          skovbunden udenfor stierne. Det er masser af frisk luft og motion, og
+          det er et forum med aktive og engagerede deltagere, der nyder samværet
+          med andre, naturen på alle årstider og nyder udfordringerne i
+          orienteringen i eget tempo og på det niveau, som den enkelte nu har
+          lyst til at udfolde sig i.
+          <br />
+          <br />
+          Det er for børn og unge, familier med børn, seniorer og pensionister
+          vi byder nemlig alle velkommen til verdens bedste idræt, der forener
+          fysiske udfoldelser med natur, frisk luft og mentale udfordringer med
+          at lave det bedste vejvalg og selvfølgelig finde posterne på ens bane.
+          Vi bruger kort og et kompas, men ikke GPS eller andre tekniske
+          hjælpemidler undervejs på banen kun til at holde styr på tiden og
+          måske se hvor man har været i skoven efter løbet.
+        </p>
       </section>
       <section class="fodtøj">
-        <img class="fodtøjbillede" src="./assets/img/OLfodtoej.jpg" alt="folk der slapper af og spiser">
+        <img
+          class="fodtøjbillede"
+          src="./assets/img/OLfodtoej.jpg"
+          alt="folk der slapper af og spiser"
+          loading="lazy"
+        />
         <h2>Fornuftigt fodtøj</h2>
-          <p>Som udgangspunkt kræver det blot fornuftigt fodtøj og tøj, man kan bevæge sig i, og som må blive vådt, hvis vejret driller lidt. Vi har altid et kompas, I kan låne, og kortet er trykt på forhånd af arrangørerne. Specielt og praktisk løbetøj og orienteringssko kan altid komme senere og måske endda en fin jakke i klubbens karakteristiske farver.
-          <br>
-          <br>
-          Og så er det selvfølgelig gratis at prøve de første mange gange fordi vi ved, at de fleste bliver så optaget af denne herlige sport for hele familien, at mange efterfølgende melder sig ind i orienteringsklubben.
-          Se mere om medlemskab under Nyt medlem og kontingent.</p>
+        <p>
+          Som udgangspunkt kræver det blot fornuftigt fodtøj og tøj, man kan
+          bevæge sig i, og som må blive vådt, hvis vejret driller lidt. Vi har
+          altid et kompas, I kan låne, og kortet er trykt på forhånd af
+          arrangørerne. Specielt og praktisk løbetøj og orienteringssko kan
+          altid komme senere og måske endda en fin jakke i klubbens
+          karakteristiske farver.
+          <br />
+          <br />
+          Og så er det selvfølgelig gratis at prøve de første mange gange fordi
+          vi ved, at de fleste bliver så optaget af denne herlige sport for hele
+          familien, at mange efterfølgende melder sig ind i orienteringsklubben.
+          Se mere om medlemskab under Nyt medlem og kontingent.
+        </p>
       </section>
       <section class="detaljeretkort">
         <h2>Detaljeret Kort</h2>
         <div class="flex">
-            <p>Verdens bedste kort  og vel at bemærke kort som viser alle detaljer, og som er nemme at bruge, når man skal finde posterne på banen.
-              <br>
-              O-kort tegnes af erfarne orienteringsløbere, og vi anvender logiske og let forståelige signaturer, som man meget hurtigt lærer at læse og derved omsætte kort til naturen  og omvendt! Alt hvad der er gult, er marker eller lysåbne områder, alt det blå handler om vand, og sorte stiplede streger i forskellige tykkelser er skovveje og stier. Jo tykkere streg  jo større sti. Det grønne på kortet fortæller, hvor tæt skoven er, men ikke om det er løvskov eller granskov. Det har vi jo ikke brug for at vide, men derimod hvor nemt vi kan færdes i skoven. Så jo mørkere grøn farve jo tættere at færdes i. Logisk ikk?
-              <br>
-              <br>
-              Vores o-kort opdateres løbende, og vi har o-kort over mange områder af Rold Skov foruden flere mindre private skove og offentlige parker. Men også o-kort over både Skørping, Støvring og Terndrup, som vi bruger til by-orientering.</p>
-            <div class="kortbilleder">
-              <img class="Okortbillede" src="./assets/img/OLO-kort-detalje.jpg" alt="billede af O-kort">
-              <img class="detaljeretkortbillede" src="./assets/img/OLO-kort-ekstra-detalje.jpg" alt="billed af ekstra detaljeret O-kort">
-            </div>
+          <p>
+            Verdens bedste kort og vel at bemærke kort som viser alle detaljer,
+            og som er nemme at bruge, når man skal finde posterne på banen.
+            <br />
+            O-kort tegnes af erfarne orienteringsløbere, og vi anvender logiske
+            og let forståelige signaturer, som man meget hurtigt lærer at læse
+            og derved omsætte kort til naturen og omvendt! Alt hvad der er gult,
+            er marker eller lysåbne områder, alt det blå handler om vand, og
+            sorte stiplede streger i forskellige tykkelser er skovveje og stier.
+            Jo tykkere streg jo større sti. Det grønne på kortet fortæller, hvor
+            tæt skoven er, men ikke om det er løvskov eller granskov. Det har vi
+            jo ikke brug for at vide, men derimod hvor nemt vi kan færdes i
+            skoven. Så jo mørkere grøn farve jo tættere at færdes i. Logisk ikk?
+            <br />
+            <br />
+            Vores o-kort opdateres løbende, og vi har o-kort over mange områder
+            af Rold Skov foruden flere mindre private skove og offentlige
+            parker. Men også o-kort over både Skørping, Støvring og Terndrup,
+            som vi bruger til by-orientering.
+          </p>
+          <div class="kortbilleder">
+            <img
+              class="Okortbillede"
+              src="./assets/img/OLO-kort-detalje.jpg"
+              alt="billede af O-kort"
+              loading="lazy"
+            />
+            <img
+              class="detaljeretkortbillede"
+              src="./assets/img/OLO-kort-ekstra-detalje.jpg"
+              alt="billed af ekstra detaljeret O-kort"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
-      </main>
-      <footer>
+    </main>
 
-      </footer>
+    <div class="sponsor">
+      <div class="sponsoroverskrift">
+        <h2>Vores Sponsorer</h2>
+      </div>
+
+      <div class="sponsorBillede">
+        <img
+          src="./assets/img/LOGOMobilefrilivLogo4xWhite-min.png"
+          alt="Friliv.dk"
+          loading="lazy"
+        />
+        <img
+          src="./assets/img/LOGOMobilesparekassen-min.png"
+          alt="SpareKassen"
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <footer>
+      <div class="footerTextAligner">
+        <section class="kontaktInfo">
+          <p><strong>Kontakt informationer</strong></p>
+          <p>Mosevej 9, 9520 Skørping</p>
+          <p>Helge Søgaard +4540615761</p>
+          <p>bestyrelsen@roldskovok.dk</p>
+        </section>
+
+        <section class="socials">
+          <p><strong>Social Media Links</strong></p>
+          <p>Facebook</p>
+          <p>Instagram</p>
+        </section>
+      </div>
+
+      <section class="nyhedsbrevContainer">
+        <div class="nyhedsbrev">
+          <h3>Få nyheder omkring nye løb</h3>
+          <form action="" method="post">
+            <label for="mail"></label>
+            <input
+              type="email"
+              id="mail"
+              placeholder="RSOK123@gmail.com"
+              required
+            />
+            <br />
+            <button>Tilmeld dig nu!</button>
+          </form>
+        </div>
+      </section>
+      <section class="footerDisclaimer">
+        <p>Link to the Privacy Policy and Terms of Use.</p>
+        <p>Copyright information, e.g., "© 2024 Rold Skov Orienteringsklub."</p>
+      </section>
+    </footer>
   </body>
 </html>

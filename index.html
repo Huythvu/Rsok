@@ -17,7 +17,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="MobileNav">
         <input type="checkbox" id="toggle" class="burgerMenu" />
         <label for="toggle" class="burgerMenuLabel"
           ><i class="fa-solid fa-bars"></i
@@ -34,21 +34,43 @@
           </ul>
         </div>
         <!-- RSOK LOGO -->
-        <img src="./assets/img/LOGOMobileRoldSkovOK-min.png" alt="" />
+        <img
+          src="./assets/img/LOGOMobileRoldSkovOK-min.png"
+          alt="Rold skov orienteringsløb logo"
+          loading="lazy"
+        />
 
         <!-- Login Icon -->
         <div class="loginIcon">
-          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-circle-user"></i>
         </div>
+      </nav>
+
+      <nav class="DesktopNav">
+        <ol>
+          <figure>
+            <img
+              src="./assets/img/LOGODesktopRoldSkovOK-min.png"
+              alt="Rold Skov Orienteringsløb Logo"
+              loading="lazy"
+            />
+          </figure>
+          <li><a href="./index.html">Forside</a></li>
+          <li><a href="./orienteringsløb.html">Orienteringsløb</a></li>
+          <li>
+            <a href="./træningOgAktiviteter.html">Træning & Aktivitet</a>
+          </li>
+          <li><a href="./medlem.html">Medlem</a></li>
+          <li><a href="./kontakt.html">Kontakt</a></li>
+          <li><i class="fa-solid fa-circle-user"></i></li>
+        </ol>
       </nav>
     </header>
     <main>
       <section>
         <article>
-          <div class="breadcrumb">
-            <p>
-              <a href="./index.html">Forside</a>
-            </p>
+          <div class="breadCrumbs">
+            <a href="./index.html"><p>Forside</p></a>
           </div>
           <div class="velkommen">
             <h1>Velkommen</h1>
@@ -68,9 +90,10 @@
         <article class="GridForside">
           <div class="foralle">
             <img
-              class="forsidebilleder gruppebillede"
+              class="forsidebilleder"
               src="./assets/img/Forsidegruppebillede1.jpg"
-              alt="Gruppebillede"
+              alt="Gruppebillede af orienteringsløber"
+              loading="lazy"
             />
             <h2>Det er for alle - Også <br />for dig og jer!</h2>
             <p>
@@ -97,9 +120,10 @@
             </p>
 
             <img
-              class="forsidebilleder hjerneoghjerte"
+              class="forsidebilleder"
               src="./assets/img/ForsideforHjerneOgHjerte.jpg"
-              alt="HjerneOgHjerte"
+              alt="Hjerne Og Hjerte Orienteringsløb"
+              loading="lazy"
             />
           </div>
         </article>
@@ -229,26 +253,27 @@
           </aside>
         </article>
       </section>
-
-      <div class="random"></div>
-
-      <div class="sponsor">
-        <div class="sponsoroverskrift">
-          <h2>Vores Sponsorer</h2>
-        </div>
-
-        <div class="sponsbillede">
-          <img
-            src="./assets/img/LOGOMobilefrilivLogo4xWhite-min.png"
-            alt="Friliv.dk"
-          />
-          <img
-            src="./assets/img/LOGOMobilesparekassen-min.png"
-            alt="SpareKassen"
-          />
-        </div>
-      </div>
     </main>
+
+    <div class="sponsor">
+      <div class="sponsoroverskrift">
+        <h2>Vores Sponsorer</h2>
+      </div>
+
+      <div class="sponsorBillede">
+        <img
+          src="./assets/img/LOGOMobilefrilivLogo4xWhite-min.png"
+          alt="Friliv.dk"
+          loading="lazy"
+        />
+        <img
+          src="./assets/img/LOGOMobilesparekassen-min.png"
+          alt="SpareKassen"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
     <footer>
       <div class="footerTextAligner">
         <section class="kontaktInfo">
@@ -280,12 +305,6 @@
             <button>Tilmeld dig nu!</button>
           </form>
         </div>
-      </section>
-      <section class="footerLogo">
-        <img
-          src="./assets/img/LOGOMobileRoldSkovOK-min.png"
-          alt="Roldskov Logo"
-        />
       </section>
 
       <section class="footerDisclaimer">

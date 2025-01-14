@@ -10,6 +10,10 @@
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
+    background: var(--paleStone);
+}
+main{
+  margin-inline: var(--paddingSmlMobile);
 }
 
 h1 {
@@ -31,6 +35,29 @@ p {
   font-size: var(--pMobile)
 }
 
+/*  */
+/* Breadcrumbs styling */
+/*  */
+
+.breadCrumbs {
+  padding-top: var(--textPaddingSpacingMobile);
+}
+
+.breadCrumbs a p {
+  display: inline;
+  color: var(--grey);
+  font-style: italic;
+}
+
+.breadCrumbs a {
+  text-decoration: none;
+}
+
+.breadCrumbs a:not(:last-of-type)::after {
+  content: " >";
+  color: var(--grey);
+}
+
 
 
 /*  */
@@ -38,16 +65,16 @@ p {
 /*  */
 :root {
   /* Sizes */
-  --h1Desktop: 3rem;
+  --h1Desktop: 4rem;
   --h1Mobile: 2.25rem;
 
-  --h2Desktop: 2rem;
+  --h2Desktop: 3rem;
   --h2Mobile: 1.75rem;
 
-  --pDesktop: 1rem;
+  --pDesktop: 1.5rem;
   --pMobile: 0.875rem;
 
-  --breadCrumbsDesktop: 0.875rem;
+  --breadCrumbsDesktop: 1.5rem;
   --breadCrumbsMobile: 0.75rem;
 
   --ctaDesktop: 1.125rem;
@@ -98,7 +125,7 @@ p {
 
   --black: #000000;
   --white: #ffffff;
-  --grey: #D9D9D9;
+  --grey: #888888;
 
 
 }
@@ -123,8 +150,10 @@ p {
 /*  */
 /* Header / Nav */
 /*  */
-
-nav{
+.DesktopNav{
+  display: none;
+}
+.MobileNav {
   width: 100vw;
   height: 60px;
   background: var(--fernLeaf);
@@ -133,19 +162,22 @@ nav{
   padding-right: var(--navBarMobile);
   padding-left: var(--navBarMobile);
 }
+
 /* Burgermenu icon og position */
-nav .burgerMenuLabel i{
+.MobileNav .burgerMenuLabel i {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 30px;
   left: 30px;
   transform: translate(0, -50%);
 }
-nav .loginIcon{
-display: flex;
-align-items: center;
+
+.MobileNav .loginIcon {
+  display: flex;
+  align-items: center;
 }
-nav i{
+
+.MobileNav i {
   font-size: var(--navBarMobile);
   color: var(--white);
 }
@@ -154,15 +186,18 @@ nav i{
 .burgerMenu {
   display: none;
 }
+
 /* Vores BurgerMenu content*/
 .fullscreen-content {
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: var(--fernLeaf);
   pointer-events: none;
+  overflow: hidden;
 
   /* Transition effekt hvor den scroller ind. Den starter ude som default. */
   transform: translateX(-150vw);
@@ -175,21 +210,28 @@ nav i{
   color: white;
 }
 
+/* Makes the burgermenu icon fixed when checked
+so it doesnt dissapear when scrolling. */
+.burgerMenu:checked~.burgerMenuLabel i {
+  position: fixed;
+}
 
 /* Viser Fullscreen when checked og position 0 0 under transition for scroll in effekt */
 .burgerMenu:checked~.fullscreen-content {
   transform: translate(0, 0);
 }
 
-nav ul{
-    padding-top: 60px;
+.MobileNav ul {
+  padding-top: 60px;
 }
-nav ul li {
-  padding:0 0 var(--navBarMobile) var(--navBarMobile);
+
+.MobileNav ul li {
+  padding: 0 0 var(--navBarMobile) var(--navBarMobile);
   list-style-type: none;
 }
+
 /* Unden pointer kan vi ikke click på anchorsne. */
-nav li a {
+.MobileNav li a {
   font-size: var(--navBarMobile);
   pointer-events: auto;
 }
@@ -330,7 +372,7 @@ padding-bottom: var(--paddingMedMobile);
 .tilbyder{
   padding-top: var(--sectionPaddingSmlMobile);
 }
-.tilbyder h2, p{
+.tilbyder h2 p{
   padding-bottom: var(--textPaddingSpacingMobile);
 }
 .historie {
@@ -344,26 +386,71 @@ aside{
   border-radius: 5%;
   padding-top:var(--paddingSmlMobile);
   padding-bottom:var(--paddingSmlMobile);
-}
-.random{
-  padding-bottom: var(--sectionPaddingSmlMobile);
+  margin-bottom: var(--sectionPaddingSmlMobile);
 }
 
+/* @media General media */
 @media (min-width: 1440px){
-h1 {
-  font-size: 64px;
+h1{
+  font-size: var(--h1Desktop);
+}
+h2{
+  font-size: var(--h2Desktop);
+}
+h3{
+  font-size: var(--breadCrumbsDesktop);
+}
+p, a{
+  font-size: var(--pDesktop);
+}
+.footerDisclaimer p{
+  font-size: var(--breadCrumbsDesktop);
+}
+/* Nav */
+.MobileNav {
+  display: none;
 }
 
-  h2, h3 {
-  font-size: 48px;
+.DesktopNav {
+  display: flex;
+  background-color: var(--fernLeaf);
+  height: 150px;
+  width: 100vw;
+  padding-left: 0;
+}
+
+.DesktopNav ol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  list-style-type: none;
+}
+.DesktopNav ol li i{
+  font-size: 4rem;
+}
+
+.DesktopNav img {
+  height: 150px;
+  width: auto;
+  display: block;
+}
+.DesktopNav i{
+  color: var(--white);
+}
+
+.DesktopNav a {
+  text-decoration: none;
+  color: var(--white);
+}
 
 }
+@media (min-width: 1440px){
 .breadcrumb a{
   color: var(--grey);
   font-weight: var(--breadCrumbsDesktop);
 }
-  p, .breadcrumb a{
-    font-size: 24px;
+  p .breadcrumb a{
     padding-bottom: var(--textPaddingSpacingDesktop);
   }
 
@@ -394,7 +481,7 @@ h2{
   grid-row: 2/-1;
   border-radius: 25px;
 }
-nav, .aside, br{
+.aside, br{
   display: none;
 }
 /* FOOTER TIL DESKTOP */
@@ -406,6 +493,9 @@ nav, .aside, br{
 .sponsoroverskrift{
   display: flex;
   align-items: center;
+}
+.sponsoroverskrift h2{
+  padding: 0;
 }
 
 footer{
@@ -437,14 +527,7 @@ footer{
 grid-column-start: 1;
 grid-column: 1/4;
 }
-/* husk lave font size om */
-.footerDisclaimer p{
-  font-size: 24px;
-}
-/* SLET LOGO */
-.footerLogo{
-  display: none;
-}
+
 /* */
 /* Orienteringsløb */
 h1 {
@@ -452,7 +535,7 @@ h1 {
 }
 
 .HogHbillede {
-  width: 100vw;
+  width: 100%;
   padding-top: var(--sectionPaddingSmlMobile);
   padding-bottom: var(--textPaddingSpacingMobile);
   display: block;
@@ -464,9 +547,13 @@ h1 {
 }
 
 .fodtøjbillede {
-  width: 100vw;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 20%;
   padding-bottom: var(--textPaddingSpacingMobile);
   display: block;
+  aspect-ratio: 2/1;
+
 }
 
 .fodtøj p {
@@ -475,25 +562,25 @@ h1 {
 
 .Okortbillede {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   padding-bottom: var(--textPaddingSpacingMobile);
   display: block;
+  aspect-ratio: 2/1;
 }
 
 .detaljeretkortbillede {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   padding-bottom: var(--textPaddingSpacingMobile);
   display: block;
+  aspect-ratio: 2/1;
 }
 
-figure{
+/* .kortbilleder{
   width: 100vw;
   height: 40vh;
   aspect-ratio: 2/1;
-} 
+}  */
 
 .flex {
   display: block;
@@ -506,31 +593,25 @@ figure{
 /* mediaequerries for Orienteringsløb */
 
 @media (min-width: 1440px) {
-
-  h1{
-    font-size: var(--h1Desktop);
-  }
-
   .HogHbillede {
-    width: 95vw;
-    height: 80vh;
+    width: 100vw;
     padding-bottom: var(--sectionPaddingSmlDesktop);
+    object-fit: cover;
+    aspect-ratio: 5/2;
   }
 
   .HogH h2{
-    font-size: var(--h2Desktop);
     padding-bottom: var(--textPaddingSpacingDesktop);
   }
 
   .HogH p {
-    font-size: 24px;
     padding-bottom: var(--textPaddingSpacingDesktop);
     padding-top: 0;
   }
 
   .fodtøj {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 0.35fr;
     grid-template-rows: 0.5 1fr;
   }
 
@@ -548,23 +629,15 @@ figure{
     grid-column-start: 1;
   }
 
-  .fodtøj h2{
-    font-size: var(--h2Desktop);
-  }
-
-  .fodtøj p {
-    font-size: 24px;
-  }
-
   .fodtøjbillede{
-    width: 50vw;
-    height: 53vh;
+    width: 35vw;
+    height: 100%;
+    object-fit: cover;
     padding-bottom: var(--textPaddingSpacingDesktop);
   }
 
   .flex {
     display: flex;
-    justify-content: space-between;
     padding-bottom: var(--sectionPaddingSmlDesktop);
   }
 
@@ -572,40 +645,200 @@ figure{
     width: 35vw;
     height: 35vh;
   }
+  .detaljeretkortbillede{
+    padding-bottom: 0;
+  }
 
   .detaljeretkort h2 {
-    font-size: var(--h2Desktop);
     padding-top: var(--sectionPaddingSmlDesktop);
   }
 
   .flex p {
-    font-size: 24px;
     width: 65ch;
+    flex-grow: 1;
   }  
+  .o-Løb section p{
+    padding-right: var(--sectionPaddingSmlDesktop);
+    padding-bottom: 0;
+  }
 }
 
 /* */
 /* træning og aktivitet */
 /*  */
 
+.TOA h1 {
+  text-align: center;
+  padding: var(--paddingMedMobile);
+}
+
+.TOA .TOA-Hero{
+  width: 100%;
+  aspect-ratio: 56/25;
+  object-fit: cover;
+  /* Display block because without it all figure img has a buttom margin for some reason */
+  display: block;
+}
+
+.TOA h2 {
+  padding-top: var(--sectionPaddingSmlMobile);
+}
+
+.TOA p {
+  padding-top: var(--textPaddingSpacingMobile);
+}
+
+.detailsMobile>summary {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: -1.5rem;
+  list-style-type: none;
+  font-style: italic;
+  font-weight: var(--semiBold);
+  color: var(--clearSky);
+}
+
+.detailsDesktop {
+  display: none;
+}
+
+.detailsDesktop summary {
+  display: none;
+}
+
+/* Her bruges der content funktionen for details open og default closed. 
+after eller before nødvendig for content til at virke */
+.detailsMobile[open] summary::after {
+  content: "Læs mindre";
+}
+
+.detailsMobile summary::after {
+  content: "Læs mere";
+}
+
+/* Da hver TOA article er parrent til og container for summary 
+bruges den til placering af vores detail/summary knap buttom -1.5rem*/
+.TOA article {
+  position: relative;
+}
+
+/* Styling and functions for all images that are in grids */
+/* General fix (fix senere pga padding top rammer desktop på hero billede) */
+.TOA figure:not(figure .TOA-HeroFigure) {
+  padding-top: var(--sectionPaddingSmlMobile);
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--textPaddingSpacingMobile);
+}
+
+.TOA section figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Familie sport section */
+.TOA-FamilieSport figure {
+  grid-template-columns: calc(50% - 4px) calc(50% - 4px);
+}
+
+.TOA .TOA-FamilieSport figure img {
+  aspect-ratio: 1/1;
+}
+
+.TOA-FamilieSport figure img:nth-of-type(1) {
+  object-position: 80%;
+}
+
+.TOA-FamilieSport figure img:nth-of-type(3) {
+  grid-column: 1/-1;
+  aspect-ratio: 5/2;
+}
+
+/* Børn og unge section */
+.TOA-BørnOgUnge figure img {
+  aspect-ratio: 11/7;
+}
+
+.TOA .TOA-BørnOgUnge figure img:nth-of-type(2) {
+  object-position: center 10%;
+}
+
+/* Seniorafdeling section */
+.TOA-Seniorafdeling figure {
+  grid-template-columns: calc(50% - 4px) calc(50% - 4px);
+}
+
+.TOA-Seniorafdeling figure img:nth-of-type(n + 2) {
+  aspect-ratio: 1/1;
+  object-position: 80%;
+}
+
+.TOA-Seniorafdeling figure img:nth-of-type(1) {
+  aspect-ratio: 2/1;
+  grid-column: 1/-1;
+}
+
+@media (min-width: 1440px) {
+  .detailsMobile {
+    display: none;
+  }
+
+  .detailsDesktop {
+    display: inline;
+  }
+
+  .TOA-flexWrapper {
+    display: flex;
+  }
+
+  .TOA section figure {
+    width: 50vw;
+  }
+    .TOA figure:not(.headerTOA figure){
+      padding-top: var(--textPaddingSpacingDesktop);
+    }
+
+  .TOA section:not(.TOA-Introduktion) article {
+    width: 50vw;
+  }
+
+  .TOA section h2 {
+    padding-top: var(--sectionPaddingSmlDesktop);
+  }
+
+  .TOA section figure {
+    padding-top: var(--textPaddingSpacingDesktop);
+  }
+  .TOA .TOA-Seniorafdeling figure, .TOA-Seniorafdeling article{
+    padding-bottom: var(--sectionPaddingSmlDesktop);
+  }
+}
+
+  /*  */
+  /* Maybe remove later for general code and avoid double code.*/
+  /*  */
+  .TOA p {
+    padding-top: var(--textPaddingSpacingDesktop);
+  }
+
+  .TOA section:not(.TOA-Introduktion) article p {
+    padding-right: var(--textPaddingSpacingDesktop);
+  }
 
 /* */
 /* Medlemsskab */
+/*  */
 .Medlemskabcards{
   background-color: var(--clearSky);
   border-radius: 15px;
   text-align: center;
-  width: 90vw;
-  height: 200px;
   margin: auto;
   margin-bottom: 1rem;
   padding: 1.5rem;
   max-width: 250px;
   
-}
-.tekst-medlem p{
-margin-left: 1rem;;
-margin-right: 1rem;
 }
 .Medlemskabcards p{
   font-size: 1.5rem;
@@ -622,17 +855,19 @@ margin-right: 1rem;
   text-align: center;
   display: flex;
   justify-content: space-between;
+  /* general fix maybe fix because hard code */
   width: 380px;
   margin: 1rem;
 }
 .kontaktcards img {
+  /* general fix hard code? */
   width: 150px;
   text-align: center;
 }
 
-.kontaktcards p,
-h1,
-h2,
+.kontaktcards > p
+h1
+h2
 h3 {
   margin: 1rem;
 
@@ -642,6 +877,7 @@ h3 {
   background-color: var(--clearSky);
   padding: 25px;
   padding-top: 10px;
+  /* general fix fix senere */
   margin-top: 3rem;
 
 }
@@ -667,11 +903,24 @@ h3 {
 /* media til medlemsskab */
 @media only screen and (min-width: 1440px){
 .Medlemskabcards{
-  max-width: 300px;
+  width: 22vw;
+  height: auto;
+  aspect-ratio: 5/4;
+  max-width: 5000px;
+  min-height: 326px;
+}
+.Medlemskabcards p {
+  font-size: 2vw;
 }
 .medlemskabpriser{
   display: flex;
   justify-content: space-around;
+}
+.Medlemskabcards div{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 }
 
