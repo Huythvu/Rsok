@@ -344,7 +344,7 @@ button {
 .velkommen h1{
 display: flex;
 justify-content: center;
-padding-bottom: var(--paddingMedMobile);
+padding-bottom: var(--textPaddingSpacingMobile);
 }
 .velkommen p{
   padding-bottom: var(--sectionPaddingSmlMobile);
@@ -353,7 +353,7 @@ padding-bottom: var(--paddingMedMobile);
   width: 100%;
   height: auto;
 }
-.h2{
+.foralle h2{
   padding-bottom: var(--textPaddingSpacingMobile);
 }
 .foralle p{
@@ -365,8 +365,8 @@ padding-bottom: var(--paddingMedMobile);
 .tilbyder{
   padding-top: var(--sectionPaddingSmlMobile);
 }
-.tilbyder h2 p{
-  padding-bottom: var(--textPaddingSpacingMobile);
+.tilbyder p{
+  padding-top: var(--textPaddingSpacingMobile);
 }
 .historie {
   padding-top: var(--sectionPaddingSmlMobile);
@@ -451,7 +451,9 @@ p, a{
   color: var(--grey);
   font-weight: var(--breadCrumbsDesktop);
 }
-
+.velkommen p{
+  padding: 0;
+}
 .forsideDF{
   display: grid;
   grid-template-columns: 0.5fr 0.5fr 0.2fr;
@@ -542,6 +544,9 @@ h1 {
   text-align: center;
 }
 
+.o-Løb h2{
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
 .HogHbillede {
   width: 100%;
   padding-top: var(--sectionPaddingSmlMobile);
@@ -550,22 +555,21 @@ h1 {
 }
 
 .HogH p {
-  padding-top: var(--textPaddingSpacingMobile);
-  padding-bottom: var(--sectionPaddingSmlMobile);
+  padding-bottom: var(--textPaddingSpacingMobile);
 }
 
 .fodtøjbillede {
   width: 100%;
   object-fit: cover;
   object-position: center 20%;
-  padding-bottom: var(--textPaddingSpacingMobile);
+  padding-bottom: var(--sectionPaddingSmlMobile);
   display: block;
   aspect-ratio: 2/1;
 
 }
 
 .fodtøj p {
-  padding-bottom: var(--sectionPaddingSmlMobile);
+  padding-bottom: var(--textPaddingSpacingMobile);
 }
 
 .Okortbillede {
@@ -575,11 +579,16 @@ h1 {
   display: block;
   aspect-ratio: 2/1;
 }
-
+.detaljeretkort h2{
+  padding-top: 24px;
+}
+.detaljeretkort p{
+  padding-bottom: var(--textPaddingSpacingMobile);
+}
 .detaljeretkortbillede {
   width: 100%;
   object-fit: cover;
-  padding-bottom: var(--textPaddingSpacingMobile);
+  padding-bottom: var(--sectionPaddingSmlMobile);
   display: block;
   aspect-ratio: 2/1;
 }
@@ -601,20 +610,15 @@ h1 {
 /* mediaequerries for Orienteringsløb */
 
 @media (min-width: 1440px) {
+  .o-Løb .HogH article p{
+    padding-right: 0;
+  }
   .HogHbillede {
     width: 100vw;
-    padding-bottom: var(--sectionPaddingSmlDesktop);
     object-fit: cover;
     aspect-ratio: 5/2;
-  }
-
-  .HogH h2{
-    padding-bottom: var(--textPaddingSpacingDesktop);
-  }
-
-  .HogH p {
-    padding-bottom: var(--textPaddingSpacingDesktop);
-    padding-top: 0;
+    padding-top: var(--textPaddingSpacingDesktop);
+    padding-bottom: var(--sectionPaddingSmlDesktop);
   }
 
   .fodtøj {
@@ -624,6 +628,7 @@ h1 {
   }
 
   .fodtøj h2{
+    padding-top: 40px;
     grid-column-start: 1;
     grid-row-start: 1;
   }
@@ -633,7 +638,7 @@ h1 {
     grid-row-start: 2;
   }
 
-  .fodtøj p{
+  .fodtøj article{
     grid-column-start: 1;
   }
 
@@ -641,12 +646,12 @@ h1 {
     width: 35vw;
     height: 100%;
     object-fit: cover;
-    padding-bottom: var(--textPaddingSpacingDesktop);
   }
 
   .flex {
     display: flex;
-    padding-bottom: var(--sectionPaddingSmlDesktop);
+    
+
   }
 
   .kortbilleder .detaljeretkortbillede, .Okortbillede {
@@ -654,20 +659,22 @@ h1 {
     height: 35vh;
   }
   .detaljeretkortbillede{
-    padding-bottom: 0;
+    margin-bottom: var(--sectionPaddingSmlDesktop);
+    padding-bottom: var(--sectionPaddingSmlDesktop);
   }
 
   .detaljeretkort h2 {
     padding-top: var(--sectionPaddingSmlDesktop);
   }
 
-  .flex p {
+  .flex article {
     width: 65ch;
     flex-grow: 1;
   }  
   .o-Løb section p{
     padding-right: var(--sectionPaddingSmlDesktop);
     padding-bottom: 0;
+    padding-bottom: var(--textPaddingSpacingMobile);
   }
 }
 
@@ -839,6 +846,14 @@ bruges den til placering af vores detail/summary knap buttom -1.5rem*/
 /* */
 /* Medlemsskab */
 /*  */
+.medlem h1{
+padding-bottom: var(--sectionPaddingSmlMobile);
+}
+.medlem h2{
+  padding-bottom: var(--textPaddingSpacingMobile);
+  padding-top: var(--sectionPaddingSmlMobile);
+}
+
 .Medlemskabcards{
   background-color: var(--clearSky);
   border-radius: 15px;
@@ -851,6 +866,9 @@ bruges den til placering af vores detail/summary knap buttom -1.5rem*/
 }
 .Medlemskabcards p{
   font-size: 1.5rem;
+}
+.tekst-medlem article:nth-last-of-type(1) p{
+  padding-bottom: var(--sectionPaddingSmlMobile);
 }
 /*  */
 
@@ -911,7 +929,13 @@ h3 {
  /*  */
 /* media til medlemsskab */
 @media only screen and (min-width: 1440px){
-.Medlemskabcards{
+  .medlem h1{
+    padding: 0;
+  }
+  .medlem h2{
+    padding-top: var(--sectionPaddingSmlDesktop);
+  }
+  .Medlemskabcards{
   width: 22vw;
   height: auto;
   aspect-ratio: 5/4;
@@ -930,6 +954,9 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.tekst-medlem article:nth-last-of-type(1) p {
+  padding-bottom: var(--sectionPaddingSmlDesktop);
 }
 }
 
