@@ -41,6 +41,7 @@ p {
 
 .breadCrumbs {
   padding-top: var(--textPaddingSpacingMobile);
+  padding-bottom: 24px;
 }
 
 .breadCrumbs a p {
@@ -340,14 +341,6 @@ button {
 
 /*  */
 /* Forside */
-.breadcrumb{
-  padding-bottom: var(--sectionPaddingSmlMobile);
-}
-.breadcrumb a{
-  text-decoration: none;
-  font-size: var(--breadCrumbsMobile);
-  color: var(--black);
-}
 .velkommen h1{
 display: flex;
 justify-content: center;
@@ -400,11 +393,18 @@ h2{
 h3{
   font-size: var(--breadCrumbsDesktop);
 }
+li a:hover{
+text-decoration: underline;
+}
 p, a{
   font-size: var(--pDesktop);
 }
 .footerDisclaimer p{
   font-size: var(--breadCrumbsDesktop);
+}
+.breadCrumbs{
+  padding-top: 3rem;
+  padding-bottom: var(--sectionPaddingSmlDesktop);
 }
 /* Nav */
 .MobileNav {
@@ -460,13 +460,23 @@ p, a{
   grid-template-rows: 0.1fr 0.5fr;
   gap: 0.5rem;
   padding: 0;
+  padding-top: var(--sectionPaddingSmlDesktop);
 }
 .foralle img{
   aspect-ratio: 1003 / 379;
   object-fit: cover;
   padding: 0;
 }
-
+.forsidebilleder{
+  margin-bottom: var(--sectionPaddingSmlDesktop);
+}
+.tilbyder{
+  padding:0;
+}
+.historie{
+  padding:0;
+  padding-top: var(--sectionPaddingSmlDesktop);
+}
 h2{
   grid-column-start: 3;
 }
