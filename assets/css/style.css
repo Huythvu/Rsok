@@ -60,6 +60,46 @@ p {
   color: var(--grey);
 }
 
+/*  */
+/* Læs mere details / summary */
+/*  */
+.detailsMobile>summary {
+  position: absolute;
+  z-index: 1;
+  list-style-type: none;
+  font-style: italic;
+  font-weight: var(--semiBold);
+  color: var(--clearSky);
+  left: 0;
+  bottom: -1rem;
+}
+/* Nød til at lave fordi padding lavet forskelligt på nogle af siderne
+iforhold til padding top og buttom. */
+.detailsMobile>.noPadddingSummary{
+  bottom: -1.5rem;
+}
+.detailsDesktop {
+  display: none;
+}
+
+.detailsDesktop summary {
+  display: none;
+}
+
+/* Her bruges der content funktionen for details open og default closed. 
+after eller before nødvendig for content til at virke */
+.detailsMobile[open] summary::after {
+  content: "Læs mindre";
+}
+
+.detailsMobile summary::after {
+  content: "Læs mere";
+}
+/* Position for all læs mere */
+.detailsSummaryPosition {
+  position: relative;
+}
+
 
 
 /*  */
@@ -348,7 +388,7 @@ justify-content: center;
 padding-bottom: var(--textPaddingSpacingMobile);
 }
 .velkommen p{
-  padding-bottom: var(--sectionPaddingSmlMobile);
+  padding-bottom: var(--textPaddingSpacingMobile);
 }
 .forsidebilleder{
   width: 100%;
@@ -362,6 +402,9 @@ padding-bottom: var(--textPaddingSpacingMobile);
 }
 .foralle img:nth-of-type(1){
   padding-bottom: var(--sectionPaddingSmlMobile);
+}
+.foralle img:nth-of-type(2){
+  padding-top: var(--sectionPaddingSmlMobile);
 }
 .desktopaside{
   display: none;
@@ -377,6 +420,9 @@ padding-bottom: var(--textPaddingSpacingMobile);
 }
 .historie {
   padding-top: var(--sectionPaddingSmlMobile);
+}
+.historie p{
+  padding-top: var(--textPaddingSpacingMobile);
 }
 .forsidenyhed{
   padding-top:var(--sectionPaddingSmlMobile);
@@ -412,6 +458,12 @@ p, a{
 .breadCrumbs{
   padding-top: 3rem;
   padding-bottom: var(--sectionPaddingSmlDesktop);
+}
+.detailsMobile {
+  display: none;
+}
+.detailsDesktop {
+  display: inline;
 }
 /* Nav */
 .MobileNav {
@@ -475,6 +527,7 @@ p, a{
   padding: 0;
 }
 .forsidebilleder{
+  padding-top: 0;
   margin-bottom: var(--sectionPaddingSmlDesktop);
 }
 .desktopaside {
@@ -578,6 +631,7 @@ h1 {
   padding-bottom: var(--sectionPaddingSmlMobile);
   display: block;
   aspect-ratio: 2/1;
+  padding-top: var(--sectionPaddingSmlMobile);
 
 }
 
@@ -591,6 +645,7 @@ h1 {
   padding-bottom: var(--textPaddingSpacingMobile);
   display: block;
   aspect-ratio: 2/1;
+  padding-top: var(--sectionPaddingSmlMobile);
 }
 .detaljeretkort h2{
   padding-top: 24px;
@@ -659,6 +714,7 @@ h1 {
     width: 35vw;
     height: 100%;
     object-fit: cover;
+    padding-top: 0;
   }
 
   .flex {
@@ -670,6 +726,7 @@ h1 {
   .kortbilleder .detaljeretkortbillede, .Okortbillede {
     width: 35vw;
     height: 35vh;
+    padding-top: 0;
   }
   .detaljeretkortbillede{
     margin-bottom: var(--sectionPaddingSmlDesktop);
@@ -715,40 +772,12 @@ h1 {
   padding-top: var(--textPaddingSpacingMobile);
 }
 
-.detailsMobile>summary {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  bottom: -1.5rem;
-  list-style-type: none;
-  font-style: italic;
-  font-weight: var(--semiBold);
-  color: var(--clearSky);
-}
-
-.detailsDesktop {
-  display: none;
-}
-
-.detailsDesktop summary {
-  display: none;
-}
-
-/* Her bruges der content funktionen for details open og default closed. 
-after eller before nødvendig for content til at virke */
-.detailsMobile[open] summary::after {
-  content: "Læs mindre";
-}
-
-.detailsMobile summary::after {
-  content: "Læs mere";
-}
-
 /* Da hver TOA article er parrent til og container for summary 
 bruges den til placering af vores detail/summary knap buttom -1.5rem*/
-.TOA article {
+/* .TOA article {
   position: relative;
-}
+} */
+
 
 /* Styling and functions for all images that are in grids */
 /* General fix (fix senere pga padding top rammer desktop på hero billede) */
@@ -796,6 +825,9 @@ bruges den til placering af vores detail/summary knap buttom -1.5rem*/
 .TOA-Seniorafdeling figure {
   grid-template-columns: calc(50% - 4px) calc(50% - 4px);
 }
+.TOA-Seniorafdeling figure:nth-last-of-type(1) {
+padding-bottom: var(--sectionPaddingSmlMobile);
+}
 
 .TOA-Seniorafdeling figure img:nth-of-type(n + 2) {
   aspect-ratio: 1/1;
@@ -806,16 +838,8 @@ bruges den til placering af vores detail/summary knap buttom -1.5rem*/
   aspect-ratio: 2/1;
   grid-column: 1/-1;
 }
-
+/* TOA media query */
 @media (min-width: 1440px) {
-  .detailsMobile {
-    display: none;
-  }
-
-  .detailsDesktop {
-    display: inline;
-  }
-
   .TOA-flexWrapper {
     display: flex;
   }
@@ -958,6 +982,9 @@ h3 {
   max-width: 5000px;
   min-height: 326px;
 }
+.medlem h1 {
+  padding-bottom: var(--paddingSmlDesktop);
+}
 .Medlemskabcards p {
   font-size: 2vw;
 }
@@ -1018,7 +1045,7 @@ h3 {
   grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
-.kantakt h1{
+.kontakt h1{
   padding: 0;
 }
 .kontaktcards h2{
