@@ -548,10 +548,10 @@ h1 {
   padding-bottom: var(--textPaddingSpacingMobile);
 }
 .HogHbillede {
-  width: 100%;
   padding-top: var(--sectionPaddingSmlMobile);
   padding-bottom: var(--textPaddingSpacingMobile);
   display: block;
+  border: 2px solid red;
 }
 
 .HogH p {
@@ -883,13 +883,15 @@ padding-bottom: var(--sectionPaddingSmlMobile);
   display: flex;
   justify-content: space-between;
   max-width: 450px;
-  
-  /* general fix maybe fix because hard code */
   margin: 1rem;
-  
+}
+summary{
+  color: var(--white);
+}
+.kontakt h1{
+  padding-bottom: var(--textPaddingSpacingMobile);
 }
 .kontaktcards img {
-  /* general fix hard code? */
   width: 150px;
   text-align: center;
 }
@@ -904,19 +906,20 @@ h3 {
 
 .links {
   background-color: var(--clearSky);
-  padding: 25px;
-  padding-top: 10px;
-  /* general fix fix senere */
-  margin-top: 3rem;
+  padding-inline: 25px;
+  padding-block: 10px;
+  margin-top:var(--sectionPaddingSmlMobile);
 
 }
 .links h2{
   color: var(--black);
-  
+}
+.links{
+  margin-bottom: var(--sectionPaddingSmlMobile);
 }
 .details-kontakt-mobile summary{
   padding: 1rem;
-  background-color: var(--grey);
+  background-color: var(--freshMint);
   margin: 1rem;
   margin-top: 0;
   font-family: "Arial", sans-serif;
@@ -936,8 +939,7 @@ h3 {
 /* media til medlemsskab */
 @media only screen and (min-width: 1440px){
 .Medlemskabcards{
-  /* width: 22vw; */
-  /* width: 25vw; */
+  width: 22vw;
   height: auto;
   aspect-ratio: 5/4;
   max-width: 5000px;
@@ -985,6 +987,9 @@ h3 {
   display: block;
   font-size: 1rem;
 }
+.details-kontakt-desktop h2{
+  padding-top: var(--sectionPaddingSmlDesktop);
+}
 .Bestyrelse{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1000,11 +1005,17 @@ h3 {
   grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
+.kantakt h1{
+  padding: 0;
+}
 .kontaktcards h2{
   font-size: 2rem;
 }
 .kontaktcards p{
   font-size: 1rem;
+}
+.links{
+  margin-block: var(--sectionPaddingSmlDesktop);
 }
 }
 /*  */
