@@ -11,6 +11,7 @@ body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
     background: var(--paleStone);
+    overflow-x: hidden;
 }
 main{
   margin-inline: var(--paddingSmlMobile);
@@ -624,7 +625,7 @@ h1 {
   .fodtøj {
     display: grid;
     grid-template-columns: 1fr 0.35fr;
-    grid-template-rows: 0.5 1fr;
+    grid-template-rows: 0.5fr 1fr;
   }
 
   .fodtøj h2{
