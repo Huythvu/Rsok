@@ -855,6 +855,7 @@ bruges den til placering af vores detail/summary knap buttom -1.5rem*/
   text-align: center;
   display: flex;
   justify-content: space-between;
+  max-width: 450px;
   
   /* general fix maybe fix because hard code */
   margin: 1rem;
