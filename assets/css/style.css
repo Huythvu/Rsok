@@ -359,8 +359,14 @@ padding-bottom: var(--textPaddingSpacingMobile);
 .foralle p{
   padding-bottom: var(--textPaddingSpacingMobile);
 }
-.foralle img{
+.foralle img:nth-of-type(1){
   padding-bottom: var(--sectionPaddingSmlMobile);
+}
+.desktopaside{
+  display: none;
+}
+.h2desktop{
+  display: none;
 }
 .tilbyder{
   padding-top: var(--sectionPaddingSmlMobile);
@@ -469,6 +475,12 @@ p, a{
 }
 .forsidebilleder{
   margin-bottom: var(--sectionPaddingSmlDesktop);
+}
+.desktopaside {
+  display: inline;
+}
+.h2desktop {
+  display: inline;
 }
 .tilbyder{
   padding:0;
