@@ -882,9 +882,11 @@ padding-bottom: var(--sectionPaddingSmlMobile);
   text-align: center;
   display: flex;
   justify-content: space-between;
+  max-width: 450px;
+  
   /* general fix maybe fix because hard code */
-  width: 380px;
   margin: 1rem;
+  
 }
 .kontaktcards img {
   /* general fix hard code? */
@@ -919,6 +921,10 @@ h3 {
   margin-top: 0;
   font-family: "Arial", sans-serif;
 }
+.details-kontakt-mobile a{
+  font-size: 0.8rem;
+  display: block;
+}
 .details-kontakt-desktop{
   display: none;
 }
@@ -929,14 +935,9 @@ h3 {
  /*  */
 /* media til medlemsskab */
 @media only screen and (min-width: 1440px){
-  .medlem h1{
-    padding: 0;
-  }
-  .medlem h2{
-    padding-top: var(--sectionPaddingSmlDesktop);
-  }
-  .Medlemskabcards{
-  width: 22vw;
+.Medlemskabcards{
+  /* width: 22vw; */
+  /* width: 25vw; */
   height: auto;
   aspect-ratio: 5/4;
   max-width: 5000px;
@@ -967,6 +968,8 @@ h3 {
 .kontaktcards{
   min-width: 300px;
   display: flex;
+  padding: 2rem;
+  margin: 1rem;
 }
 .details-kontakt-mobile{
   display: none;
@@ -977,6 +980,10 @@ h3 {
 }
 .details-kontakt-desktop summary{
   display: none;
+}
+.details-kontakt-desktop a{
+  display: block;
+  font-size: 1rem;
 }
 .Bestyrelse{
   display: grid;
@@ -992,6 +999,12 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.kontaktcards h2{
+  font-size: 2rem;
+}
+.kontaktcards p{
+  font-size: 1rem;
 }
 }
 /*  */
