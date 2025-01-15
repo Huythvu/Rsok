@@ -317,6 +317,10 @@ footer{
   background: var(--deepForest);
   color: white;
 }
+footer a {
+  text-decoration: none;
+  color: var(--white);
+}
 
 footer p {
   font-size: var(--footerTextMobile);
@@ -433,6 +437,7 @@ aside{
   padding-top:var(--paddingSmlMobile);
   padding-bottom:var(--paddingSmlMobile);
   margin-bottom: var(--sectionPaddingSmlMobile);
+  padding-inline: 0.5rem;
 }
 
 /* @media General media */
@@ -506,10 +511,6 @@ p, a{
 
 }
 @media (min-width: 1440px){
-.breadCrumbs a{
-  color: var(--grey);
-  font-weight: var(--breadCrumbsDesktop);
-}
 .velkommen p{
   padding: 0;
 }
@@ -526,12 +527,15 @@ p, a{
   object-fit: cover;
   padding: 0;
 }
-.forsidebilleder{
+.foralle img:nth-of-type(2){
   padding-top: 0;
+}
+.forsidebilleder{
   margin-bottom: var(--sectionPaddingSmlDesktop);
 }
 .desktopaside {
   display: inline;
+  padding-inline: 5px;
 }
 .h2desktop {
   display: inline;
@@ -579,6 +583,9 @@ footer{
   grid-template-columns: 0.5fr 0.5fr 0.5fr;
   grid-template-rows: 0.5fr 0.5fr;
 }
+footer a:hover{
+  text-decoration: underline;
+}
 .nyhedsbrevContainer{
   grid-column-start:3;
 }
@@ -589,6 +596,7 @@ footer{
 }
 .nyhedsbrev{
   width: 50%;
+  padding-inline: 1rem;
 }
 .footerTextAligner{
   display: grid;
@@ -645,7 +653,7 @@ h1 {
   padding-bottom: var(--textPaddingSpacingMobile);
   display: block;
   aspect-ratio: 2/1;
-  padding-top: var(--sectionPaddingSmlMobile);
+  padding-top: 24px;
 }
 .detaljeretkort h2{
   padding-top: 24px;
@@ -715,6 +723,7 @@ h1 {
     height: 100%;
     object-fit: cover;
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   .flex {
@@ -754,6 +763,7 @@ h1 {
 
 .TOA h1 {
   text-align: center;
+  padding-bottom: var(--textPaddingSpacingMobile);
 }
 
 .TOA .TOA-Hero{
@@ -840,6 +850,9 @@ padding-bottom: var(--sectionPaddingSmlMobile);
 }
 /* TOA media query */
 @media (min-width: 1440px) {
+  .TOA h1{
+    padding: 0;
+  }
   .TOA-flexWrapper {
     display: flex;
   }
@@ -883,9 +896,6 @@ padding-bottom: var(--sectionPaddingSmlMobile);
 /* */
 /* Medlemsskab */
 /*  */
-.medlem h1{
-padding-bottom: var(--sectionPaddingSmlMobile);
-}
 .medlem h2{
   padding-bottom: var(--textPaddingSpacingMobile);
   padding-top: var(--sectionPaddingSmlMobile);
