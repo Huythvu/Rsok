@@ -425,6 +425,7 @@ p, a{
   align-items: center;
   width: 100vw;
   list-style-type: none;
+  padding-right: 4vw;
 }
 .DesktopNav ol li i{
   font-size: 4rem;
@@ -446,13 +447,10 @@ p, a{
 
 }
 @media (min-width: 1440px){
-.breadcrumb a{
+.breadCrumbs a{
   color: var(--grey);
   font-weight: var(--breadCrumbsDesktop);
 }
-  p .breadcrumb a{
-    padding-bottom: var(--textPaddingSpacingDesktop);
-  }
 
 .forsideDF{
   display: grid;
@@ -679,7 +677,6 @@ h1 {
 
 .TOA h1 {
   text-align: center;
-  padding: var(--paddingMedMobile);
 }
 
 .TOA .TOA-Hero{
@@ -694,7 +691,7 @@ h1 {
   padding-top: var(--sectionPaddingSmlMobile);
 }
 
-.TOA p {
+.TOA article p {
   padding-top: var(--textPaddingSpacingMobile);
 }
 
@@ -735,7 +732,7 @@ bruges den til placering af vores detail/summary knap buttom -1.5rem*/
 
 /* Styling and functions for all images that are in grids */
 /* General fix (fix senere pga padding top rammer desktop på hero billede) */
-.TOA figure:not(figure .TOA-HeroFigure) {
+.TOA figure:not(.TOA-HeroFigure) {
   padding-top: var(--sectionPaddingSmlMobile);
   display: grid;
   grid-template-rows: auto;
@@ -806,9 +803,14 @@ bruges den til placering af vores detail/summary knap buttom -1.5rem*/
   .TOA section figure {
     width: 50vw;
   }
-    .TOA figure:not(.headerTOA figure){
-      padding-top: var(--textPaddingSpacingDesktop);
-    }
+  
+  .TOA .TOA-HeroFigure{
+    padding-top: var(--textPaddingSpacingMobile);
+  }
+
+  .TOA figure:not(.headerTOA figure){
+    padding-top: var(--textPaddingSpacingDesktop);
+  }
 
   .TOA section:not(.TOA-Introduktion) article {
     width: 50vw;
@@ -824,19 +826,16 @@ bruges den til placering af vores detail/summary knap buttom -1.5rem*/
   .TOA .TOA-Seniorafdeling figure, .TOA-Seniorafdeling article{
     padding-bottom: var(--sectionPaddingSmlDesktop);
   }
-}
-
-  /*  */
-  /* Maybe remove later for general code and avoid double code.*/
-  /*  */
-  .TOA p {
-    padding-top: var(--textPaddingSpacingDesktop);
-  }
 
   .TOA section:not(.TOA-Introduktion) article p {
     padding-right: var(--textPaddingSpacingDesktop);
   }
 
+}
+
+
+
+  
 /* */
 /* Medlemsskab */
 /*  */
