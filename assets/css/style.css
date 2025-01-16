@@ -34,7 +34,8 @@ h6 {
 
 p {
   /* 14 pixel */
-  font-size: var(--pMobile)
+  font-size: var(--pMobile);
+
 }
 
 /*  */
@@ -571,7 +572,7 @@ h2{
   grid-row: 2/-1;
   border-radius: 25px;
 }
-.aside, br{
+.aside, .aside br{
   display: none;
 }
 /* FOOTER TIL DESKTOP */
@@ -980,7 +981,6 @@ h3 {
   background-color: var(--freshMint);
   margin: 1rem;
   margin-top: 0;
-  font-family: "Arial", sans-serif;
 }
 .details-kontakt-mobile a{
   font-size: 0.8rem;
