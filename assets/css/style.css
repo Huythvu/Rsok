@@ -16,6 +16,8 @@ body {
 }
 main{
   margin-inline: var(--paddingSmlMobile);
+  max-width: 1440px;
+  justify-self: center;
 }
 
 h1 {
@@ -242,10 +244,11 @@ after eller before nødvendig for content til at virke */
   background-color: var(--fernLeaf);
   pointer-events: none;
   overflow: hidden;
+  /* opacity: 0; */
 
   /* Transition effekt hvor den scroller ind. Den starter ude som default. */
   transform: translateX(-150vw);
-  transition: transform 1s ease;
+  transition: transform 1s ease-in-out;
 }
 
 .fullscreen-content a {
@@ -263,6 +266,7 @@ so it doesnt dissapear when scrolling. */
 /* Viser Fullscreen when checked og position 0 0 under transition for scroll in effekt */
 .burgerMenu:checked~.fullscreen-content {
   transform: translate(0, 0);
+  /* opacity: 1; */
 }
 
 .MobileNav ul {
@@ -450,6 +454,9 @@ aside{
   margin-bottom: var(--sectionPaddingSmlMobile);
   padding-inline: 0.5rem;
 }
+.asideMobile{
+  max-width: 450px;
+}
 
 /* @media General media */
 @media (min-width: 1440px){
@@ -533,6 +540,9 @@ p, a{
   padding: 0;
   padding-top: var(--sectionPaddingSmlDesktop);
 }
+.foralle h2 br{
+  display: none;
+}
 .foralle img{
   aspect-ratio: 1003 / 379;
   object-fit: cover;
@@ -545,6 +555,7 @@ p, a{
   margin-bottom: var(--sectionPaddingSmlDesktop);
 }
 .desktopaside {
+  min-width: 300px;
   display: inline;
   padding-inline: 5px;
 }
@@ -572,7 +583,10 @@ h2{
   grid-row: 2/-1;
   border-radius: 25px;
 }
-.aside, .aside br{
+.desktopaside p{
+  padding-bottom: var(--sectionPaddingSmlDesktop);
+}
+.asideMobile, .asideMobile br{
   display: none;
 }
 /* FOOTER TIL DESKTOP */
@@ -711,7 +725,7 @@ h1 {
   .fodtøj {
     display: grid;
     grid-template-columns: 1fr 0.35fr;
-    grid-template-rows: 0.5fr 1fr;
+    grid-template-rows: 125px 1fr;
   }
 
   .fodtøj h2{
@@ -940,6 +954,7 @@ padding-bottom: var(--sectionPaddingSmlMobile);
   display: flex;
   justify-content: space-between;
   max-width: 450px;
+  min-width: 352px;
   margin: 1rem;
   background: var(--white);
   justify-self: center;
