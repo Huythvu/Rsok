@@ -9,10 +9,10 @@
 /* Typography */
 /*  */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Epilogue";
   line-height: 1.6;
-    background: var(--paleStone);
-    overflow-x: hidden;
+  background: var(--paleStone);
+  overflow-x: hidden;
 }
 main{
   margin-inline: var(--paddingSmlMobile);
