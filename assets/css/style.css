@@ -941,6 +941,7 @@ padding-bottom: var(--sectionPaddingSmlMobile);
   justify-content: space-between;
   max-width: 450px;
   margin: 1rem;
+  background: var(--white);
 }
 summary{
   color: var(--white);
