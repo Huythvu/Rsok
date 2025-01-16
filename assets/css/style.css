@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -337,6 +338,15 @@ footer section {
 .socials p {
   padding-bottom: var(--textPaddingSpacingMobile);
 }
+.socials p:nth-last-of-type(1)::after{
+  content: "  \f16d";
+  font-family: "Font Awesome 6 Brands";
+}
+.socials p:nth-last-of-type(2)::after{
+  content: "  \f09a";
+  font-family: "Font Awesome 6 Brands";
+
+}
 
 .nyhedsbrev {
   background: var(--fernLeaf);
@@ -613,7 +623,7 @@ grid-column: 1/4;
 }
 
 /* */
-/* Orienteringsløb */
+/* Om Orienteringsløb */
 h1 {
   text-align: center;
 }
@@ -683,7 +693,7 @@ h1 {
   padding-bottom: var(--textPaddingSpacingMobile);
 }
 
-/* mediaequerries for Orienteringsløb */
+/* mediaequerries for Om Orienteringsløb */
 
 @media (min-width: 1440px) {
   .o-Løb .HogH article p{
