@@ -941,6 +941,10 @@ padding-bottom: var(--sectionPaddingSmlMobile);
   max-width: 450px;
   margin: 1rem;
   background: var(--white);
+  justify-self: center;
+}
+.kontaktcards div:nth-last-of-type(1){
+  padding-left: 16px;
 }
 summary{
   color: var(--white);
@@ -991,6 +995,7 @@ h3 {
 .details-kontakt-desktop summary{
   display: none;
 }
+
 
  /*  */
 /* media til medlemsskab */
@@ -1046,9 +1051,6 @@ h3 {
 .details-kontakt-desktop a{
   display: block;
   font-size: 1rem;
-}
-.details-kontakt-desktop h2{
-  padding-top: var(--sectionPaddingSmlDesktop);
 }
 .Bestyrelse{
   display: grid;
