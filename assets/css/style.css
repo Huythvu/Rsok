@@ -943,9 +943,6 @@ padding-bottom: var(--sectionPaddingSmlMobile);
   background: var(--white);
   justify-self: center;
 }
-.kontaktcards div:nth-last-of-type(1){
-  padding-left: 16px;
-}
 summary{
   color: var(--white);
 }
@@ -1033,7 +1030,7 @@ h3 {
 /* media til kontakt */
 @media only screen and (min-width: 1440px) {
 .kontaktcards{
-  min-width: 300px;
+  min-width: 443px;
   display: flex;
   padding: 2rem;
   margin: 1rem;
